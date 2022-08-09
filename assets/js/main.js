@@ -215,7 +215,7 @@
   /**
    * Initiate gallery lightbox 
    */
-  const galleryLightbox = glightbox({
+  const galleryLightbox = GLightbox({
     selector: '.gallery-lightbox'
   });
 
