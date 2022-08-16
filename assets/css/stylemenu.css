@@ -1,0 +1,157 @@
+
+.container a:hover{
+    text-decoration: underline !important;
+}
+
+.lstproduct{
+    width: 20%;
+    padding-right: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #F1F1F1;
+    border-left: #B7A45C;
+    border-top: #B7A45C;
+    border-bottom: #B7A45C;
+    height: 264px;
+}
+.lstproduct a{
+    color: black;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.lstproduct ul{
+    list-style: none;
+}
+.lstproduct a:hover{
+    color: #B7A45C;
+}
+.lstype{
+    color: #222222 !important;
+    width: 100%;
+    background: white;
+    /* border: solid; */
+    border: -2px;
+    margin-top: 11%;
+    border-style: solid;
+    border-color: beige;
+    border-width: 1px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.stickyelm{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.product{
+    margin-left: 3%;
+    width: 100%;
+}
+.product .stickyelm{
+    background: white;
+    position: -webkit-sticky;
+    position: sticky ;
+    top: 0;
+    z-index: 1;
+    margin-left: -4%;
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 2px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px
+}
+.btpro{
+    margin-top: 10px;
+    background-color:#040505;
+    color: #FEFDFB;
+    border-style: solid;
+    border-color: #040505;
+    padding: 20px;
+    height: 63px;
+    width: 152px;
+}
+.btpro:hover{
+    background: transparent;
+}
+.carousel-item img{
+    height: 548px;
+    width: 451px;
+}
+.carousel-item button{
+    position: absolute;
+    margin-top: -36%;
+    margin-left: 43%;
+    transition: 0.5s;
+}
+.carousel-item  button:hover{
+    opacity: 0.6;
+}
+.activetype{
+    text-decoration: underline  !important;
+}
+.container{
+    max-width: 100%;
+    font-family: "Open Sans", sans-serif !important;
+}
+.position-relative{
+    margin-top: 200px;
+}
+.product h6{
+    font-size: 205%;
+}
+.slide{
+    margin-left: 4%;
+    width: 90%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+input[type = text]{
+    color: #222222;
+    background: transparent;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #222222;
+    width: 100%;
+    height: 35px;
+    border-width: 1px;
+}
+input[type = text]:focus{
+
+    outline: none;
+}
+.bi-search{
+    height: 35px;
+    background: transparent;
+    color: black;
+    border-width: 1px;
+    transition: 0.5s;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: black;
+    margin-left: -2px;
+}
+.bi-search:hover{
+    background-color: black;
+    color: white;
+}
+.bi-filter{
+    font-size: 12px;
+    background: transparent;
+    border-color: transparent;
+    color: black;
+    padding: 1%;
+    border-width: 1px;
+    margin-right: 1%;
+}
+.filterbt{
+    width: 16%;
+    font-size: 12px;
+    background: transparent;
+    border-color: black;
+    color: black;
+    padding: 1%;
+    border-width: 1px;
+    margin-right: 1%;
+    transition: 0.5s;
+}
+.filterbt:hover{
+    background-color: #F0EFED;
+}
