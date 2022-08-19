@@ -1,0 +1,112 @@
+.navbar{
+    width: 16%;
+}
+.navbar a[class = nav-link]{
+    padding: 0 !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+.container a{
+    color: black !important;
+}
+.card{
+    background-color: white;
+    margin-right: 12%;
+    margin-bottom: 121px;
+    border-color: white;
+    transition: all ease-in-out 0.4s;
+}
+
+.card .btpro {
+    height: 82px;
+    transition: 0.5s;
+    margin-top: -10px;
+    width: 111px;
+    margin-right: 5px;
+
+}
+
+.shopcard{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 15px;
+
+}
+
+.card-img-top{
+    border-radius: 0%;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card-body{
+    padding: 3%;
+}
+.card-title{
+    margin-bottom: 1%;
+    max-width: 60%;
+}
+.card-text{
+    font-style: italic;
+    font-size: 12px;
+}
+.card-body .bi-heart{
+    background: transparent;
+    color: black;
+    border-color: transparent;
+    position: sticky;
+    height: 30px;
+}
+.searchbar{
+    width: 100%;
+}
+.shopcard a{
+    height: 57%;
+}
+.header{
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: chocolate;
+    padding: 3px 17px;
+    margin-bottom: -11%;
+    background: white;
+    z-index: 1;
+}
+
+.login > ul{
+   width: 100%;
+}
+.navbar .dropdown ul {
+    left: -206% !important;
+    border: solid !important;
+    color: black !important;
+    border-color: black !important;
+    border-width: 1px !important;
+    border-radius: 0 !important;
+    box-shadow: none!important;
+}
+.mobile-res{
+    display: none;
+}
+.mobile-nav{
+    margin-top: 27%;
+    right: 13px;
+    z-index: 2;
+}
+@media (max-width: 576px){
+    .mobile-res{
+        display: block;
+    }
+    .normal-res{
+        display: none !important;
+    }
+    .shopcard{
+        grid-template-columns: 33% 33% 33%;
+    }
+    .filterbt{
+        width: 20%;
+    }
+
+}

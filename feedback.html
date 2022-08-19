@@ -1,0 +1,78 @@
+<?php include('./php-control/feedback.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Template Feedback CSS File -->
+    <link href="./assets/css/feedback.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <div class="imagebg"></div>
+    <div class="row " style="margin-top: 50px">
+        <div class="col-md-6 col-md-offset-3 form-container">
+            <h1 class="text-center">Customer Feedback Form</h1>
+            <p class="text-center">How satisfied are you with our company overall?</p>
+            <form role="form" method="POST">
+                <div class="row">
+                    <div class="col-sm-12 form-group text-center">
+                        <p>
+                            <label class="radio-inline">
+                                <input type="radio" name="experience" value="good">
+                                Good
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="experience" value="average">
+                                Average
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="experience" value="bad">
+                                Bad
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label for="comments"> Comments:</label>
+                        <textarea class="form-control" type="textarea" name="comments" id="comments"
+                                  placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label for="name"> Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="email"> Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button type="submit" name="feedback" class="btn btn-lg btn-info btn-block">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
