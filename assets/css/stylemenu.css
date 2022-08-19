@@ -7,11 +7,6 @@
     width: 20%;
     padding-right: 50px;
     border-width: 1px;
-    border-style: solid;
-    border-color: #F1F1F1;
-    border-left: #B7A45C;
-    border-top: #B7A45C;
-    border-bottom: #B7A45C;
     height: 264px;
 }
 .lstproduct a{
@@ -40,8 +35,7 @@
     border-right-color: transparent;
 }
 .stickyelm{
-  position: -webkit-sticky;
-  position: sticky;
+  position:      sticky;
   top: 0;
 }
 .product{
@@ -54,7 +48,6 @@
     position: sticky ;
     top: 0;
     z-index: 1;
-    margin-left: -4%;
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 2px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
     box-shadow: rgb(0 0 0 / 10%) 0px 4px
 }

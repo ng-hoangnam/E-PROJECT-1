@@ -39,13 +39,34 @@
   <!-- ======= Header ======= -->
   <div class="container">
     <div class="header d-flex flex-row justify-content-between align-items-center">
+
+      <!-- search bar -->
       <div class="d-flex flex-row">
-        <input type="text" placeholder="Search.."> <button type="button" class="bi bi-search"></button>
+        <div class="dropdown mobile-res">
+          <button class="bi bi-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+          <ul class="dropdown-menu">
+            <li class="d-flex"><input type="text" placeholder="Search.." class="dropdown-item"> <button type="button" class="bi bi-search"></button></li>
+          </ul>
+        </div>
+        <div class="normal-res d-flex flex-row">
+          <input type="text" placeholder="Search.."> <button type="button" class="bi bi-search"></button>
+        </div>
       </div>
-      <a href="index.html" class="logo me-auto me-lg-0">
+      <!-- end search bar -->
+
+
+
+
+      <!-- logo -->
+      <a href="index.html" class="logo me-lg-0">
         <img src="../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
       </a>
-      <nav  class="navbar login ">
+      <!-- end logo -->
+
+
+
+      <!-- navbar login -->
+      <nav  class="navbar login normal-res">
         <ul class="justify-content-between">
             <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i></a>
                 <ul>
@@ -66,6 +87,21 @@
             <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
         </ul>
     </nav>
+
+    <div class="mobile-res">
+      <div class="dropdown">
+        <button class="bi bi-chevron-double-down dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i></a>
+          <li class="dropdown-item"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i></a>
+          <li class="dropdown-item"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- end navbar login -->
     </div>
   </div>
   
@@ -73,7 +109,21 @@
     <div class="container">
       <!-- nav bar -->
       <div class="lstype text-light d-flex flex-row ">
-          <div class="lstproduct stickyelm">
+          <div class="mobile-res mobile-nav">
+            <div class="dropdown stickyelm">
+              <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+              <ul class="dropdown-menu">
+                <a href="../product/viewall.html" class="dropdown-item"><li>View All</li></a>
+                <a href="../product/ceiling.html" class="activetype dropdown-item"><li>Ceiling Lights</li></a>
+                <a href="../product/wall.html" class="dropdown-item"><li>Wall Lights</li></a>
+                <a href="../product/lamp.html" class="dropdown-item"><li>Lamps</li></a>
+                <a href="../product/outdoor.html" class="dropdown-item"><li>Outdoor Lights</li></a>
+                <a href="../product/fans.html" class="dropdown-item"><li>Fans </li></a>
+                <a href="../product/accents.html" class="dropdown-item"><li>Accents </li></a>
+              </ul>
+            </div>
+          </div>
+          <div class="lstproduct stickyelm normal-res">
             <a href="">Lighting</a>
             <ul>
                 <a href="../product/viewall.html"><li>View All</li></a>

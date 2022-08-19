@@ -29,6 +29,7 @@
 .shopcard{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    padding: 15px;
 
 }
 
@@ -85,4 +86,27 @@
     border-width: 1px !important;
     border-radius: 0 !important;
     box-shadow: none!important;
+}
+.mobile-res{
+    display: none;
+}
+.mobile-nav{
+    margin-top: 27%;
+    right: 13px;
+    z-index: 2;
+}
+@media (max-width: 576px){
+    .mobile-res{
+        display: block;
+    }
+    .normal-res{
+        display: none !important;
+    }
+    .shopcard{
+        grid-template-columns: 33% 33% 33%;
+    }
+    .filterbt{
+        width: 20%;
+    }
+
 }
