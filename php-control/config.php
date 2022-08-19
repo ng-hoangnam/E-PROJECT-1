@@ -7,32 +7,11 @@
  */
 
 //Config Database
-$mySQL = new mysqli("localhost", "root", "");
-
-if ($mySQL === false) {
-    die("ERROR: Could not connect..." . $mySQL->connect_error);
-}
-
-// Create Database
-$database = "CREATE DATABASE IF NOT EXISTS ChicLighting";
-
-$mySQL->query($database);
-
-// Create Table Users
-$feedbackTable = "CREATE TABLE IF NOT EXISTS Feedback (
-        id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        fullname VARCHAR(50),
-        email VARCHAR(50),
-        comment VARCHAR(50),
-        experience VARCHAR(50),
-        crtdate DATE
-    )";
-
-$connect = new mysqli("localhost", "root", "", "ChicLighting");
+$connect = mysqli_connect('localhost' , 'root' , '' , 'chiclighting');
 
 if ($connect === false) {
-    die("ERROR: Could not connect..." . $mySQL->connect_error);
+    die("ERROR: Could not connect..." . $connect->connect_error);
 }
 
-$connect->query($feedbackTable);
+?>
 
