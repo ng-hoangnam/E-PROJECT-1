@@ -1,0 +1,21 @@
+.maincontent{
+    margin-top: 11%;
+}
+.slide{
+    margin: 0;
+    width: 34%;
+}
+.carousel-indicators{
+    display: block;
+    position: relative;
+    width: 453px;
+    height: 101px;
+    margin: 0;
+}
+.carousel-indicators button{
+    width: 20% !important;
+}
+.productinfor{
+    width: 46%;
+    padding: 3%;
+}
