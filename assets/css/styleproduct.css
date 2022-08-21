@@ -52,12 +52,15 @@
     font-style: italic;
     font-size: 12px;
 }
-.card-body .bi-heart{
+.card-body .bi-heart, .productinfor .bi-heart{
     background: transparent;
     color: black;
     border-color: transparent;
     position: sticky;
     height: 30px;
+}
+.card-body .bi-heart:focus, .productinfor .bi-heart:focus{
+   color: red;
 }
 .searchbar{
     width: 100%;
@@ -78,6 +81,9 @@
 .login > ul{
    width: 100%;
 }
+.dropdown-item label{
+    margin-left: 33%;
+}
 .navbar .dropdown ul {
     left: -206% !important;
     border: solid !important;
@@ -87,13 +93,19 @@
     border-radius: 0 !important;
     box-shadow: none!important;
 }
+.lstfilterbtn{
+    padding: 7px 105px 13px 0px;
+}
 .mobile-res{
     display: none;
 }
 .mobile-nav{
-    margin-top: 27%;
     right: 13px;
     z-index: 2;
+}
+.buttn-drop{
+    border: none;
+    background: transparent;
 }
 @media (max-width: 576px){
     .mobile-res{
@@ -105,8 +117,18 @@
     .shopcard{
         grid-template-columns: 33% 33% 33%;
     }
+    .card-title{
+        max-width: 100%;
+        font-size: 12px;
+    }
     .filterbt{
         width: 20%;
+    }
+    .lstfilterbtn{
+        padding: 7px 0px 13px 0px;
+    }
+    .product{
+        margin: 0;
     }
 
 }
