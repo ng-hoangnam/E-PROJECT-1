@@ -35,14 +35,14 @@
     border-right-color: transparent;
 }
 .stickyelm{
-  position:      sticky;
+  position: sticky;
   top: 0;
 }
 .product{
     margin-left: 3%;
     width: 100%;
 }
-.product .stickyelm{
+.product > .stickyelm{
     background: white;
     position: -webkit-sticky;
     position: sticky ;
@@ -134,6 +134,7 @@ input[type = text]:focus{
     border-width: 1px;
     margin-right: 1%;
 }
+
 .filterbt{
     width: 16%;
     font-size: 12px;

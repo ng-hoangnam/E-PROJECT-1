@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Details</title>
     <link href="../assets/" rel="icon">
     <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   
@@ -38,94 +38,163 @@
     </div>
   
     <!-- ======= Header ======= -->
-    <div class="container">
-      <div class="header d-flex flex-row justify-content-between align-items-center">
-        <div class="d-flex flex-row">
+  <div class="container">
+    <div class="header d-flex flex-row justify-content-between align-items-center">
+
+      <!-- search bar -->
+      <div class="d-flex flex-row">
+        <div class="dropdown mobile-res">
+          <button class="bi bi-search" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+          <ul class="dropdown-menu">
+            <li class="d-flex"><input type="text" placeholder="Search.." class="dropdown-item"> <button type="button" class="bi bi-search"></button></li>
+          </ul>
+        </div>
+        <div class="normal-res d-flex flex-row">
           <input type="text" placeholder="Search.."> <button type="button" class="bi bi-search"></button>
         </div>
-        <a href="index.html" class="logo me-auto me-lg-0">
-          <img src="../../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
-        </a>
-        <nav  class="navbar login ">
-          <ul class="justify-content-between">
-              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i></a>
-                  <ul>
-                      <li><a href="#">Drop Down 1</a></li>
-                      <li><a href="#">Drop Down 2</a></li>
-                      <li><a href="#">Drop Down 3</a></li>
-                      <li><a href="#">Drop Down 4</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i></a>
-                  <ul>
-                      <li><a href="#">Drop Down 1</a></li>
-                      <li><a href="#">Drop Down 2</a></li>
-                      <li><a href="#">Drop Down 3</a></li>
-                      <li><a href="#">Drop Down 4</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
-          </ul>
-      </nav>
+      </div>
+      <!-- end search bar -->
+
+
+
+
+      <!-- logo -->
+      <a href="index.html" class="logo me-lg-0">
+        <img src="../../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
+      </a>
+      <!-- end logo -->
+
+
+
+      <!-- navbar login -->
+      <nav  class="navbar login normal-res">
+        <ul class="justify-content-between">
+            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i></a>
+                <ul>
+                    <li><a href="#">Drop Down 1</a></li>
+                    <li><a href="#">Drop Down 2</a></li>
+                    <li><a href="#">Drop Down 3</a></li>
+                    <li><a href="#">Drop Down 4</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i></a>
+                <ul>
+                    <li><a href="#">Drop Down 1</a></li>
+                    <li><a href="#">Drop Down 2</a></li>
+                    <li><a href="#">Drop Down 3</a></li>
+                    <li><a href="#">Drop Down 4</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-res">
+      <div class="dropdown">
+        <button class="bi bi-chevron-double-down buttn-drop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i><label>Login</label> </a></li>
+          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i><label>Favorite</label></a></li>
+          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i><label>Cart</label></a></li>
+        </ul>
       </div>
     </div>
+
+
+    <!-- end navbar login -->
+    </div>
+  </div>
     <!-- main content -->
     <div class="container maincontent">
       <div class="lstype text-light d-flex flex-row">
-         <!-- navbar -->
-         <div class="lstproduct stickyelm">
-          <a href="">Lighting</a>
+        <!-- navbar -->
+        <div class="lstproduct stickyelm normal-res">
+          <a href="">Our Product</a>
           <ul>
-            <a href="../E-PROJECT-1/product/viewall.html"><li>View All</li></a>
-            <a href="../E-PROJECT-1/product/ceiling.html"><li>Ceiling Lights</li></a>
-            <a href="../E-PROJECT-1/product/wall.html"><li>Wall Lights</li></a>
-            <a href="../E-PROJECT-1/product/lamp.html"><li>Lamps</li></a>
-            <a href="../E-PROJECT-1/product/outdoor.html"><li>Outdoor Lights</li></a>
-            <a href="../E-PROJECT-1/product/fans.html"><li>Fans </li></a>
-            <a href="../E-PROJECT-1/product/accents.html"><li>Accents </li></a>
+              <a href="../product/viewall.html"><li>View All</li></a>
+              <a href="../product/ceiling.html" class="activetype"><li>Ceiling Lights</li></a>
+              <a href="../product/wall.html"><li>Wall Lights</li></a>
+              <a href="../product/lamp.html"><li>Lamps</li></a>
+              <a href="../product/outdoor.html"><li>Outdoor Lights</li></a>
+              <a href="../product/fans.html"><li>Fans </li></a>
+              <a href="../product/accents.html"><li>Accents </li></a>
           </ul>
+       </div>
+    <!-- end navbar -->
+    <div style="width: 100%;">
+      <!-- mobile res nav bar -->
+      <div class="mobile-res mobile-nav">
+        <div class="dropdown ">
+          <button class="bi bi-justify buttn-drop" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+          <ul class="dropdown-menu">
+            <a href="../product/viewall.html" class="dropdown-item"><li>View All</li></a>
+            <a href="../product/ceiling.html" class="activetype dropdown-item"><li>Ceiling Lights</li></a>
+            <a href="../product/wall.html" class="dropdown-item"><li>Wall Lights</li></a>
+            <a href="../product/lamp.html" class="dropdown-item"><li>Lamps</li></a>
+            <a href="../product/outdoor.html" class="dropdown-item"><li>Outdoor Lights</li></a>
+            <a href="../product/fans.html" class="dropdown-item"><li>Fans </li></a>
+            <a href="../product/accents.html" class="dropdown-item"><li>Accents </li></a>
+          </ul>
+        </div>
       </div>
-      <!-- end navbar -->
-        <!-- slide -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../../assets/img/lightType/productinfor/tpl1zoom.jpg" class="d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/img/lightType/productinfor/tpl2zoom.jpg" class="d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/img/lightType/productinfor/tpl3zoom.jpg" class="d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/img/lightType/productinfor/tpl4zoom.jpg" class="d-block" alt="...">
-            </div>
+      <!-- end mobile nav bar -->
+      <div class="text-center fw-bold fs-2 justify-content-between">
+        <p>Our Product</p>
+      </div>
+      <div class="d-flex flex-row">
+      <!-- slide -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../assets/img/lightType/productinfor/tpl1zoom.jpg" class="d-block" alt="...">
           </div>
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><img src="../../assets/img/lightType/productinfor/tpl1.jpg" class="d-block" alt="..."></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img src="../../assets/img/lightType/productinfor/tpl2.jpg" class="d-block" alt="..."></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img src="../../assets/img/lightType/productinfor/tpl3.jpg" class="d-block" alt="..."></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img src="../../assets/img/lightType/productinfor/tpl4.jpg" class="d-block" alt="..."></button>
+          <div class="carousel-item">
+            <img src="../../assets/img/lightType/productinfor/tpl2zoom.jpg" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/img/lightType/productinfor/tpl3zoom.jpg" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/img/lightType/productinfor/tpl4zoom.jpg" class="d-block" alt="...">
           </div>
         </div>
+        <div class="carousel-indicators justify-content-between">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><img src="../../assets/img/lightType/productinfor/tpl1.jpg" class="d-block" alt="..."></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img src="../../assets/img/lightType/productinfor/tpl2.jpg" class="d-block" alt="..."></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img src="../../assets/img/lightType/productinfor/tpl3.jpg" class="d-block" alt="..."></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img src="../../assets/img/lightType/productinfor/tpl4.jpg" class="d-block" alt="..."></button>
+        </div>
+      </div>
 
 
-        <!-- end silde -->
-        <!-- information -->
-            <div class="productinfor justify-content-between">
+      <!-- end silde -->
+      <!-- information -->
+          <div class="productinfor justify-content-between">
+              <div class="fw-bold mb-5">
                 <p>Product name</p>
                 <p>Price</p>
-                <form action="">
-                  <input type="radio" name="method" value="Ship"> SHIP <br>
-                  <input type="radio" name="method" value="Freepickup"> FREE CURBSIDE PICKUP AT STORE <br>
-                  <input type="checkbox" name="addinstall"> Add Installation Service Powered by Handy <br>
-                  <input type="number" name="quantity" min="1"> <br>
-                  <input type="submit" value="ADD TO CART"> <br>
-                </form>
-            </div>
-        <!-- end information -->
-        </div>
+              </div>
+              <form action="">
+                <div class="radiobutn">
+                  <input type="radio" name="method" value="Ship" class="form-check-input mb-4"> <label>SHIP</label> <br>
+                  <input type="radio" name="method" value="Freepickup" class="form-check-input mb-4"> <label>FREE CURBSIDE PICKUP AT STORE</label>  <br>
+                </div>
+                <input type="checkbox" name="addinstall" class="form-check-input mb-4 mt-5"> <label class="mt-5 mb-4">Add Installation Service Powered by Handy</label>  <br>
+                <div class="d-flex flex-row justify-content-between">
+                  <div>
+                    <label class="me-4">Number:</label><input type="number" name="quantity" min="1" class="mb-4"> <br>
+                  </div>
+                  <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                </div>
+                <input type="submit" value="ADD TO CART" class="mt-5"> <br>
+              </form>
+          </div>
+      <!-- end information -->
+      </div>  
+    </div>
+      
+      </div>
     </div>
     <!--end main content -->
      <!-- ======= Footer ======= -->
