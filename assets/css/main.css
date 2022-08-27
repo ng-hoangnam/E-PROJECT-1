@@ -484,29 +484,6 @@ h6 {
     font-size: 22px;
 }
 
-#hero .btns {
-    margin-top: 30px;
-}
-
-#hero .btn-product {
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 50px;
-    transition: 0.3s;
-    line-height: 1;
-    color: 000;
-    border: 2px solid #000;
-}
-
-#hero .btn-product:hover {
-    background: #000;
-    color: #fff;
-}
-
 #hero .play-btn {
     width: 94px;
     height: 94px;
@@ -686,6 +663,10 @@ section {
 /*--------------------------------------------------------------
   # About
   --------------------------------------------------------------*/
+#about {
+    margin-top: 115px;
+}
+
 .about {
     background: url("../img/about-bg.jpg") center center;
     background-size: cover;
@@ -855,89 +836,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-  # Testimonials
-  --------------------------------------------------------------*/
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-    overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-    box-sizing: content-box;
-    min-height: 320px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-    width: 90px;
-    border-radius: 50%;
-    margin: -40px 0 0 40px;
-    position: relative;
-    z-index: 2;
-    border: 6px solid rgba(255, 255, 255, 0.2);
-}
-
-.testimonials .testimonial-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px 45px;
-    color: #000;
-}
-
-.testimonials .testimonial-item h4 {
-    font-size: 14px;
-    color: #222;
-    margin: 0 0 0 45px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-    color: #000;
-    font-size: 26px;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-}
-
-.testimonials .testimonial-item p {
-    font-style: italic;
-    margin: 4px 15px 0px 15px;
-    padding: 20px 20px 60px 20px;
-    background: #F9F9F9;
-    position: relative;
-    border-radius: 6px;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0px 0px 8px rgba(127, 137, 161, 0.25);
-}
-
-.testimonials .swiper-pagination {
-    margin-top: 30px;
-    position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #999;
-    opacity: 0.5;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #000;
-    opacity: 1;
-}
-
-/*--------------------------------------------------------------
   # Staffs
   --------------------------------------------------------------*/
 .staffs .member {
@@ -1025,6 +923,10 @@ section {
 /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+#contact {
+    margin-top: 115px;
+} 
+  
 .contact .info {
     width: 100%;
 }
@@ -1148,19 +1050,6 @@ section {
 
 .contact .php-email-form textarea {
     padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-    padding: 8px 32px;
-    color: #222;
-    border-bottom: 1px solid #222;
-    border-radius: 50px;
-    transition: 0.4s;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-    background: #000;
-    color: #fff;
 }
 
 @-webkit-keyframes animate-loading {
