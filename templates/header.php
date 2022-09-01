@@ -48,7 +48,7 @@
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
-                <a href="#" class="btn btn-dark d-none d-lg-flex">Sign In</a>
+                <a href="./login.html" class="btn btn-outline-dark d-none d-lg-flex">Sign In</a>
 
             </div>
         </header><!-- End Header -->

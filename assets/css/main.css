@@ -1180,3 +1180,30 @@ section {
 #footer .credits a:hover {
     text-decoration: underline;
 }
+
+/*--------------------------------------------------------------
+  # Login Template
+  --------------------------------------------------------------*/
+.login-input {
+    border: none !important;
+    border-bottom: 1px solid #e1e1e1 !important;
+    box-shadow: none !important;
+}
+
+.login-input:hover {
+    border-bottom: 1px solid #162d3d !important;
+}
+
+.login-input:focus {
+    border-bottom: 3px solid #ffca2c !important;
+}
+
+.login-input~label {
+    padding: 1.4rem 1.5rem !important;
+    font-size: 1.2em !important;
+}
+
+.login-input:not(:placeholder-shown)~label,
+.login-input:focus~label {
+    transform: scale(.65) translateY(-1rem) translateX(0.65rem) !important;
+}
