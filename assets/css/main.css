@@ -1188,6 +1188,7 @@ section {
     border: none !important;
     border-bottom: 1px solid #e1e1e1 !important;
     box-shadow: none !important;
+    background-color: #f1f1f1;
 }
 
 .login-input:hover {
@@ -1196,6 +1197,7 @@ section {
 
 .login-input:focus {
     border-bottom: 3px solid #ffca2c !important;
+    background-color: #f1f1f1;
 }
 
 .login-input~label {
