@@ -12,17 +12,17 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   
     <!-- Vendor CSS Files -->
-    <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/stylemenu.css">
-    <link rel="stylesheet" href="../../assets/css/styleproduct.css">
-    <link rel="stylesheet" href="../../assets/css/productinfor.css">
-    <link href="../../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylemenu.css">
+    <link rel="stylesheet" href="../assets/css/styleproduct.css">
+    <link rel="stylesheet" href="../assets/css/productinfor.css">
+    <link href="../assets/css/main.css" rel="stylesheet">
 
 </head>
 <body>
@@ -57,13 +57,11 @@
 
 
 
-
       <!-- logo -->
       <a href="index.html" class="logo me-lg-0">
-        <img src="../../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
+        <img src="../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
       </a>
       <!-- end logo -->
-
 
 
       <!-- navbar login -->
@@ -101,7 +99,6 @@
       </div>
     </div>
 
-
     <!-- end navbar login -->
     </div>
   </div>
@@ -109,16 +106,16 @@
     <div class="container maincontent">
       <div class="lstype text-light d-flex flex-row">
         <!-- navbar -->
-        <div class="lstproduct stickyelm normal-res">
+        <div class="lstproduct stickyelm">
           <a href="">Our Product</a>
           <ul>
-              <a href="../product/viewall.html"><li>View All</li></a>
-              <a href="../product/ceiling.html" class="activetype"><li>Ceiling Lights</li></a>
-              <a href="../product/wall.html"><li>Wall Lights</li></a>
-              <a href="../product/lamp.html"><li>Lamps</li></a>
-              <a href="../product/outdoor.html"><li>Outdoor Lights</li></a>
-              <a href="../product/fans.html"><li>Fans </li></a>
-              <a href="../product/accents.html"><li>Accents </li></a>
+              <a href="../viewall.html"><li>View All</li></a>
+              <a href="../ceiling.html"><li>Ceiling Lights</li></a>
+              <a href="../wall.html"><li>Wall Lights</li></a>
+              <a href="../lamp.html"><li>Lamps</li></a>
+              <a href="../outdoor.html"><li>Outdoor Lights</li></a>
+              <a href="../fans.html"><li>Fans </li></a>
+              <a href="../accents.html"><li>Accents </li></a>
           </ul>
        </div>
     <!-- end navbar -->
@@ -128,45 +125,52 @@
         <div class="dropdown ">
           <button class="bi bi-justify buttn-drop" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
           <ul class="dropdown-menu">
-            <a href="../product/viewall.html" class="dropdown-item"><li>View All</li></a>
-            <a href="../product/ceiling.html" class="activetype dropdown-item"><li>Ceiling Lights</li></a>
-            <a href="../product/wall.html" class="dropdown-item"><li>Wall Lights</li></a>
-            <a href="../product/lamp.html" class="dropdown-item"><li>Lamps</li></a>
-            <a href="../product/outdoor.html" class="dropdown-item"><li>Outdoor Lights</li></a>
-            <a href="../product/fans.html" class="dropdown-item"><li>Fans </li></a>
-            <a href="../product/accents.html" class="dropdown-item"><li>Accents </li></a>
+            <a href="../viewall.html" class="dropdown-item"><li>View All</li></a>
+            <a href="../ceiling.html" class="activetype dropdown-item"><li>Ceiling Lights</li></a>
+            <a href="../wall.html" class="dropdown-item"><li>Wall Lights</li></a>
+            <a href="../lamp.html" class="dropdown-item"><li>Lamps</li></a>
+            <a href="../outdoor.html" class="dropdown-item"><li>Outdoor Lights</li></a>
+            <a href="../fans.html" class="dropdown-item"><li>Fans </li></a>
+            <a href="../accents.html" class="dropdown-item"><li>Accents </li></a>
           </ul>
         </div>
       </div>
       <!-- end mobile nav bar -->
       <div class="text-center fw-bold fs-2 justify-content-between">
-        <p>Our Product</p>
+        <p>Product Details</p>
       </div>
-      <div class="d-flex flex-row">
+      <div class="d-flex flex-row justify-content-between">
       <!-- slide -->
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div id="carouselExampleIndicators" class="carousel slide gallery" data-bs-ride="true">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../../assets/img/lightType/productinfor/tpl1zoom.jpg" class="d-block" alt="...">
+          <div class="carousel-item gallery-item active">
+            <a href="../assets/img/lightType/productinfor/tpl1zoom.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="../assets/img/lightType/productinfor/tpl1zoom.jpg" alt="...">
+            </a>
           </div>
-          <div class="carousel-item">
-            <img src="../../assets/img/lightType/productinfor/tpl2zoom.jpg" class="d-block" alt="...">
+          <div class="carousel-item gallery-item">
+            <a href="../assets/img/lightType/productinfor/tpl2zoom.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="../assets/img/lightType/productinfor/tpl2zoom.jpg" alt="...">
+            </a>
           </div>
-          <div class="carousel-item">
-            <img src="../../assets/img/lightType/productinfor/tpl3zoom.jpg" class="d-block" alt="...">
+          <div class="carousel-item gallery-item">
+            <a href="../assets/img/lightType/productinfor/tpl3zoom.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="../assets/img/lightType/productinfor/tpl3zoom.jpg" alt="...">
+            </a>
           </div>
-          <div class="carousel-item">
-            <img src="../../assets/img/lightType/productinfor/tpl4zoom.jpg" class="d-block" alt="...">
+          <div class="carousel-item gallery-item">
+            <a href="../assets/img/lightType/productinfor/tpl4zoom.jpg" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="../assets/img/lightType/productinfor/tpl4zoom.jpg" alt="...">
+            </a>
           </div>
         </div>
         <div class="carousel-indicators justify-content-between">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><img src="../../assets/img/lightType/productinfor/tpl1.jpg" class="d-block" alt="..."></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img src="../../assets/img/lightType/productinfor/tpl2.jpg" class="d-block" alt="..."></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img src="../../assets/img/lightType/productinfor/tpl3.jpg" class="d-block" alt="..."></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img src="../../assets/img/lightType/productinfor/tpl4.jpg" class="d-block" alt="..."></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><img src="../assets/img/lightType/productinfor/tpl1zoom.jpg" alt="..."></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img src="../assets/img/lightType/productinfor/tpl2zoom.jpg" alt="..."></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img src="../assets/img/lightType/productinfor/tpl3zoom.jpg" alt="..."></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img src="../assets/img/lightType/productinfor/tpl4zoom.jpg" alt="..."></button>
         </div>
       </div>
-
 
       <!-- end silde -->
       <!-- information -->
@@ -266,14 +270,15 @@
 
 
 
-
-    <script src="../../assets/vendor/aos/aos.js"></script>
-    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
   
     <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
