@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <link href="../assets/" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/stylemenu.css">
+    <link rel="stylesheet" href="../assets/css/styleproduct.css">
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+     <!-- ======= Top Bar ======= -->
+     <div id="topbar" class="d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+
+          <div class="contact-info d-flex align-items-center">
+              <i class="bi bi-phone d-flex align-items-center"><span>+84 85 247 0666</span></i>
+              <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 9AM - 23PM</span></i>
+          </div>
+      </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <div class="container">
+    <div class="header d-flex flex-row justify-content-between align-items-center">
+
+      <!-- search bar -->
+      <div class="d-flex flex-row">
+        <!-- mobile res -->
+        <div class="dropdown mobile-res">
+          <button class="bi bi-search" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+          <ul class="dropdown-menu">
+            <li class="d-flex"><input type="text" placeholder="Search.." class="dropdown-item"> <button type="button" class="bi bi-search"></button></li>
+          </ul>
+        </div>
+        <!-- end mobile res -->
+        <div class="normal-res d-flex flex-row">
+          <input type="text" placeholder="Search.."> <button type="button" class="bi bi-search"></button>
+        </div>
+      </div>
+      <!-- end search bar -->
+
+
+
+
+      <!-- logo -->
+      <a href="../index.html" class="logo me-lg-0">
+        <img src="../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
+      </a>
+      <!-- end logo -->
+
+
+
+      <!-- navbar login -->
+      <nav  class="navbar login normal-res">
+        <ul class="justify-content-between">
+            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i></a>
+                <ul>
+                    <li><a href="#">Drop Down 1</a></li>
+                    <li><a href="#">Drop Down 2</a></li>
+                    <li><a href="#">Drop Down 3</a></li>
+                    <li><a href="#">Drop Down 4</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i></a>
+                <ul>
+                    <li><a href="#">Drop Down 1</a></li>
+                    <li><a href="#">Drop Down 2</a></li>
+                    <li><a href="#">Drop Down 3</a></li>
+                    <li><a href="#">Drop Down 4</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
+        </ul>
+    </nav>
+      <!-- mobile res -->
+    <div class="mobile-res">
+      <div class="dropdown">
+        <button class="bi bi-chevron-double-down buttn-drop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i><label>Login</label> </a></li>
+          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i><label>Favorite</label></a></li>
+          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i><label>Cart</label></a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- end mobile res -->
+
+    <!-- end navbar login -->
+    </div>
+  </div>
+  
+  <!-- main content -->
+    <div class="container">
+      <!-- nav bar -->
+      <div class="lstype text-light d-flex flex-row">
+          
+          <div class="lstproduct stickyelm normal-res">
+            <a href="">Our Product</a>
+            <ul>
+                <a href="../product/viewall.html"><li>View All</li></a>
+                <a href="../product/ceiling.html"><li>Ceiling Lights</li></a>
+                <a href="../product/wall.html"><li>Wall Lights</li></a>
+                <a href="../product/lamp.html"><li>Lamps</li></a>
+                <a href="../product/outdoor.html" class="activetype"><li>Outdoor Lights</li></a>
+                <a href="../product/fans.html"><li>Fans </li></a>
+                <a href="../product/accents.html"><li>Accents </li></a>
+            </ul>
+         </div>
+      <!-- end nav bar -->
+      <!-- product -->
+        <div class="product" >
+            <div class="d-flex flex-row mt-4 mb-5 ">
+              <h6 class="font-weight-light" style="margin-left: 4%;">Outdoor Lights</h6>
+              
+            </div>
+              <div class="d-flex flex-row mt-4 mb-5 stickyelm lstfilterbtn">
+                <div class="mobile-res mobile-nav">
+                  <div class="dropdown ">
+                    <button class="bi bi-justify buttn-drop" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu">
+                      <a href="../product/viewall.html" class="dropdown-item"><li>View All</li></a>
+                      <a href="../product/ceiling.html" class="dropdown-item"><li>Ceiling Lights</li></a>
+                      <a href="../product/wall.html" class="dropdown-item"><li>Wall Lights</li></a>
+                      <a href="../product/lamp.html" class="dropdown-item"><li>Lamps</li></a>
+                      <a href="../product/outdoor.html" class="activetype dropdown-item"><li>Outdoor Lights</li></a>
+                      <a href="../product/fans.html" class="dropdown-item"><li>Fans </li></a>
+                      <a href="../product/accents.html" class="dropdown-item"><li>Accents </li></a>
+                    </ul>
+                  </div>
+                </div>
+                <button type="button" class="bi bi-filter"> FILTER </button>
+                <button type="button" class="filterbt">PICKUP</button>
+                <button type="button" class="filterbt" >READY TO SHIP</button>
+                <button type="button" class="filterbt">SHIP WITHIN 6 WEEKS</button>
+                <button type="button" class="filterbt" style="background-color: black; color: white ;">VIEW ALL</button>
+            </div>
+            <!-- shopping card -->
+            <div class="shopcard ">
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od1.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od2.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od3.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od4.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od5.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od6.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od7.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od8.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od9.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od10.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od11.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od12.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od13.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <a href=""><img src="../assets/img/lightType/outdoor/od14.jpg" class="card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-row justify-content-between">
+                    <a href="" style="width: 100%;"><p class="card-title">Product name</p></a>
+                    <button type="button" class="bi bi-heart" title="Save to favourite"></button>
+                  </div>
+                  <p class="card-text">price</p>
+                  
+                  
+                </div>
+              </div>
+
+          
+    
+            </div>
+
+
+              
+            <!--end shopping card -->
+             
+
+        </div>
+        
+        <!-- end product -->
+    </div>
+    </div>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-lg-3 col-md-6">
+                      <div class="footer-info">
+                          <h3>Restaurantly</h3>
+                          <p>
+                              285 Doi Can, Lieu Giai <br>
+                              Ba Dinh, Hanoi, Vietnam.<br><br>
+                              <strong>Phone:</strong> +84 85 247 0666<br>
+                              <strong>Email:</strong> nghoangnam.job@gmail.com<br>
+                          </p>
+                          <div class="social-links mt-3">
+                              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-2 col-md-6 footer-links">
+                      <h4>Useful Links</h4>
+                      <ul>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 footer-links">
+                      <h4>Our Services</h4>
+                      <ul>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                      <h4>Our Newsletter</h4>
+                      <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="container">
+          <div class="copyright">
+              &copy; Copyright <strong><span>nghoangnam</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+      </div>
+  </footer><!-- End Footer -->
+
+
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
