@@ -25,6 +25,7 @@
 
 
       <!-- ======= Products Section ======= -->
+
         <section id="product" class="product">
             <div class="container" data-aos="fade-up">
 
@@ -169,6 +170,134 @@
 
             </div>
         </section><!-- End Products Section -->
+=======
+      <section id="product" class="product">
+          <div class="container" data-aos="fade-up">
+
+              <div class="section-title">
+                  <h2>Our Products</h2>
+                  <p>Selling The Best Products</p>
+              </div>
+
+              <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                  <div class="swiper-wrapper">
+        
+                    <div class="swiper-slide">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                          <h3>Accents</h3>
+                          <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                          </p>
+                          <div class="text-end mt-4">
+                              <a href="./product/accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                          <h3>Accents</h3>
+                          <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                          </p>
+                          <div class="text-end mt-4">
+                              <a href="./product/accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                          <h3>Accents</h3>
+                          <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                          </p>
+                          <div class="text-end mt-4">
+                              <a href="./product/accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                          <h3>Accents</h3>
+                          <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                          </p>
+                          <div class="text-end mt-4">
+                              <a href="./product/accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                          <h3>Accents</h3>
+                          <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                          </p>
+                          <div class="text-end mt-4">
+                              <a href="./product/accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                          <h3>Accents</h3>
+                          <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                          </p>
+                          <div class="text-end mt-4">
+                              <a href="./product/accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+                  <div class="mt-5"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+
+          </div>
+      </section><!-- End Products Section -->
+
 
       <!-- ======= Why Us Section ======= -->
       <section id="why-us" class="why-us">
