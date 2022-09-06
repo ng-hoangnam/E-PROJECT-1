@@ -38,9 +38,7 @@
 
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.card:hover{
-    transform: scale(1.1);
-}
+
 .card-body{
     padding: 3%;
 }
@@ -107,15 +105,56 @@
     border: none;
     background: transparent;
 }
-@media (max-width: 576px){
+@media (max-width: 992px){
     .mobile-res{
         display: block;
     }
     .normal-res{
         display: none !important;
     }
+    .header > div{
+        width: 17%;
+    }
+    input[type=text],.bi-search{
+        font-size: 9px;
+        height: 30px;
+    }
+    .logo img{
+        height: 36px;
+    }
+    .header .navbar > ul{
+        display: flex;
+    }
+    .login i{
+        font-size: 16px !important;
+    }
+    .dropdown ul{
+        width: 0;
+    }
+    .dropdown ul li{
+        min-width: 0 !important;
+    }
+    .lstproduct{
+        padding: 0;
+        width: 30%;
+        height: 200px;
+    }
+    .lstproduct a{
+        font-size: 9px;
+    }
+    .lstproduct ul{
+        padding-left: 5px;
+    }
+    .lstproduct ul li {
+        margin-bottom: 0;
+    }
+    .product div{
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+    
     .shopcard{
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 50% 50%;
     }
     .card-title{
         max-width: 100%;
@@ -123,12 +162,19 @@
     }
     .filterbt{
         width: 20%;
+        font-size: 7px;
+    }
+    .bi-filter{
+        font-size: 7px;
     }
     .lstfilterbtn{
         padding: 7px 0px 13px 0px;
     }
     .product{
         margin: 0;
+    }
+    .product h6{
+        font-size: 105%;
     }
 
 }

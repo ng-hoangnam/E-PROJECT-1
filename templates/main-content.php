@@ -25,6 +25,152 @@
 
 
       <!-- ======= Products Section ======= -->
+
+        <section id="product" class="product">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Our Products</h2>
+                    <p>Selling The Best Products</p>
+                </div>
+
+                <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+          
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>View All</h3>
+                            <p class="fst-italic">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.
+                            </p>
+                            <div class="text-end mt-4">
+                                <a href="viewall.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>Accents</h3>
+                            <p class="fst-italic">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.
+                            </p>
+                            <div class="text-end mt-4">
+                                <a href="accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img src="./assets/img/lightType/ceiling/cl1.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>Ceiling Lights</h3>
+                            <p class="fst-italic">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.
+                            </p>
+                            <div class="text-end mt-4">
+                                <a href="ceiling.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img src="./assets/img/lightType/fan/f1.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>Fans</h3>
+                            <p class="fst-italic">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.
+                            </p>
+                            <div class="text-end mt-4">
+                                <a href="fans.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img src="./assets/img/lightType/Lamp/l1.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>Lamps</h3>
+                            <p class="fst-italic">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.
+                            </p>
+                            <div class="text-end mt-4">
+                                <a href="lamp.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img src="./assets/img/lightType/outdoor/od1.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>Outdoor Lights</h3>
+                            <p class="fst-italic">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.
+                            </p>
+                            <div class="text-end mt-4">
+                                <a href="outdoor.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <img src="./assets/img/lightType/Wall/w1.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>Wall Lights</h3>
+                            <p class="fst-italic">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.
+                            </p>
+                            <div class="text-end mt-4">
+                                <a href="wall.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          
+                    </div>
+                    <div class="mt-5"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+
+            </div>
+        </section><!-- End Products Section -->
+=======
       <section id="product" class="product">
           <div class="container" data-aos="fade-up">
 
@@ -151,6 +297,7 @@
 
           </div>
       </section><!-- End Products Section -->
+
 
       <!-- ======= Why Us Section ======= -->
       <section id="why-us" class="why-us">
