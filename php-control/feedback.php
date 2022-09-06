@@ -12,7 +12,6 @@ include('./php-control/config.php');
 
 // Validate Log-in Form
 $errors = array();
-
 if (isset($_POST['feedback'])) {
 
     $experience = ($_POST['experience']);
@@ -34,19 +33,28 @@ if (isset($_POST['feedback'])) {
         $name = $connect->real_escape_string($_POST['name']);
         $email = $connect->real_escape_string($_POST['email']);
         $date = date('Y-m-d');
-        $insertData = "INSERT INTO Feedback VALUES (DEFAULT, '$name', '$email', '$comments', '$experience', '$date')";
 
-        if ($connect->query($insertData) == TRUE) {
+        $data = array(
+            'fullname' => $name,
+            'email' => $email,
+            'comment' => $comments,
+            'experience' => $experience,
+            'crtdate' => $date
+        );
+
+        $var = insert_data('feedback',$data);
+        if ($var == TRUE) {
             echo '
                     <script type="text/javascript">
                         alert("Thank you for your feedback!");
                     </script>';
 
-        } else
+        } else {
             echo '
                     <script type="text/javascript">
                         alert("Error");
                     </script>';
+        }
     }
 
     //Quay lai trang index
