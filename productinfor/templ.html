@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
-    <link href="../assets/" rel="icon">
+    <link href="../assets/img/favicon.png" rel="icon">
     <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   
     <!-- Google Fonts -->
@@ -38,75 +38,54 @@
     </div>
   
     <!-- ======= Header ======= -->
-  <div class="container">
-    <div class="header d-flex flex-row justify-content-between align-items-center">
-
-      <!-- search bar -->
-      <div class="d-flex flex-row">
-        <div class="dropdown mobile-res">
-          <button class="bi bi-search" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-          <ul class="dropdown-menu">
-            <li class="d-flex"><input type="text" placeholder="Search.." class="dropdown-item"> <button type="button" class="bi bi-search"></button></li>
+    <div class="container">
+      <div class="header d-flex flex-row justify-content-between align-items-center">
+  
+        <!-- search bar -->
+        <div class="d-flex flex-row">
+          <div class="d-flex flex-row">
+            <input type="text" placeholder="Search.."> <button type="button" class="bi bi-search"></button>
+          </div>
+        </div>
+        <!-- end search bar -->
+  
+  
+        <!-- logo -->
+        <a href="index.html" class="logo me-lg-0">
+          <img src="../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
+        </a>
+        <!-- end logo -->
+  
+        <!-- navbar login -->
+        <nav  class="navbar login">
+          <ul class="justify-content-between">
+              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i></a>
+                  <ul>
+                      <li><a href="#">Drop Down 1</a></li>
+                      <li><a href="#">Drop Down 2</a></li>
+                      <li><a href="#">Drop Down 3</a></li>
+                      <li><a href="#">Drop Down 4</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i></a>
+                  <ul>
+                      <li><a href="#">Drop Down 1</a></li>
+                      <li><a href="#">Drop Down 2</a></li>
+                      <li><a href="#">Drop Down 3</a></li>
+                      <li><a href="#">Drop Down 4</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
           </ul>
-        </div>
-        <div class="normal-res d-flex flex-row">
-          <input type="text" placeholder="Search.."> <button type="button" class="bi bi-search"></button>
-        </div>
-      </div>
-      <!-- end search bar -->
-
-
-
-      <!-- logo -->
-      <a href="index.html" class="logo me-lg-0">
-        <img src="../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
-      </a>
-      <!-- end logo -->
-
-
-      <!-- navbar login -->
-      <nav  class="navbar login normal-res">
-        <ul class="justify-content-between">
-            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i></a>
-                <ul>
-                    <li><a href="#">Drop Down 1</a></li>
-                    <li><a href="#">Drop Down 2</a></li>
-                    <li><a href="#">Drop Down 3</a></li>
-                    <li><a href="#">Drop Down 4</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i></a>
-                <ul>
-                    <li><a href="#">Drop Down 1</a></li>
-                    <li><a href="#">Drop Down 2</a></li>
-                    <li><a href="#">Drop Down 3</a></li>
-                    <li><a href="#">Drop Down 4</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
-        </ul>
-    </nav>
-
-    <div class="mobile-res">
-      <div class="dropdown">
-        <button class="bi bi-chevron-double-down buttn-drop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        </button>
-        <ul class="dropdown-menu">
-          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-person" style="font-size: 30px;"></i><label>Login</label> </a></li>
-          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-heart" style="font-size: 30px;"></i><label>Favorite</label></a></li>
-          <li class="dropdown-item"><a href="" class="nav-link scrollto " style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i><label>Cart</label></a></li>
-        </ul>
+      </nav>
+      <!-- end navbar login -->
       </div>
     </div>
-
-    <!-- end navbar login -->
-    </div>
-  </div>
     <!-- main content -->
     <div class="container maincontent">
       <div class="lstype text-light d-flex flex-row">
         <!-- navbar -->
-        <div class="lstproduct stickyelm">
+        <div class="lstproduct stickyelm normal-res">
           <a href="">Our Product</a>
           <ul>
               <a href="../viewall.html"><li>View All</li></a>
