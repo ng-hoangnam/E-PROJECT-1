@@ -57,10 +57,20 @@
             $EMAIL_RES = $connect->real_escape_string($email);
             $PASSWORD_RES = $connect->real_escape_string($user_password);
                 $PASSWORD_HASH = sha1($PASSWORD_RES);
-        
-            $insertRegData = "INSERT INTO users (USERID, FIRSTNAME, LASTNAME, ADDRESS, USERNAME, PASSWORD) VALUES (DEFAULT, '$FIRST_NAME_RES', '$LAST_NAME_RES', '$ADDRESS_RES', '$USERNAME_RES', '$EMAIL_RES', '$PASSWORD_HASH')";
+            
+            $data = array(
+                "USERID" => "DEFAULT",
+                "FIRSTNAME" => $FIRST_NAME_RES,
+                "LASTNAME" => $LAST_NAME_RES,
+                "ADDRESS" => $ADDRESS_RES,
+                "EMAIL" => $EMAIL_RES,
+                "USERNAME" => $USERNAME_RES,
+                "PASSWORD" => $PASSWORD_HASH,
+            );
+
+            $insertRegData = insert_data('users', $data);
     
-            if ($connect->query($insertRegData) == TRUE) {
+            if ($insertRegData == TRUE) {
                 echo '
                     <script type="text/javascript">
                         alert("Sign up successfully");

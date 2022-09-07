@@ -32,7 +32,7 @@
         if (count($errors) == 0) {
             $ESCAPE_STRING_ACCOUNT = $connect->real_escape_string($account);
             $ESCAPE_STRING_PASSWORD = $connect->real_escape_string($password);
-                $PASSWORD_HASH = sha1($ESCAPE_STRING_PASSWORD);
+                $PASSWORD_HASH = sha1($password);
 
             $checkUsers = "SELECT * FROM users WHERE USERNAME = '$ESCAPE_STRING_ACCOUNT' AND PASSWORD = '$PASSWORD_HASH'";
             $result = $connect->query($checkUsers);
@@ -55,7 +55,7 @@
                     };
                 };
 
-                header('Location: studentDB.html');
+                header('Location: index.html');
                 
             } else {
                 $errors['log-in-fail'] = '*Wrong username or password';
