@@ -24,7 +24,7 @@
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
                         <li><a class="nav-link" href="./index.html">Home</a></li>
-                        <li class="dropdown"><a href="./product/accents.html" class="nav-link"><span>Products</span> <i
+                        <li class="dropdown"><a href="./accents.html" class="nav-link"><span>Products</span> <i
                                     class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a href="#">Drop Down 1</a></li>

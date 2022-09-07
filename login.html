@@ -1,3 +1,4 @@
+<?php include('./php-control/login.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,69 +37,40 @@
                 <img src="./assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
             </a>
 
-            <div class="row d-flex flex-column justify-content-center align-items-center mt-3">
-                <h1 class="text-center">Login</h1>
-                <div class="mt-5"></div>
-                <div class="col-12 col-md-8 col-lg-6 form-floating mb-3">
-                    <input class="form-control rounded-0 login-input" type="text" placeholder="username">
-                    <label>Username:</label>
-                </div>
-                <div class="col-12 col-md-8 col-lg-6 form-floating mb-5">
-                    <input class="form-control rounded-0 login-input" type="password" placeholder="password">
-                    <label>Password:</label>
-                </div>
-                <div class="col-6 text-end">
-                    <a href=""><i><u>Forget your password</u></i></a>
-                </div>
-                <div class="col-12 col-md-8 col-lg-6 my-5">
-                    <button type="submit" class="btn btn-dark container-fluid" style="height: 3em;">SIGN IN</button>
-                </div>
+            <form method="POST" role="form">
+                <div class="row d-flex flex-column justify-content-center align-items-center mt-3">
+                    <h1 class="text-center">Login</h1>
+                    <div class="mt-5"></div>
+                    <div class="col-12 col-md-8 col-lg-6 form-floating mb-3">
+                        <input class="form-control rounded-0 login-input" type="text" placeholder="username"
+                            name="account">
+                        <label>Username:</label>
+                        <?php if(isset($errors['account'])) : echo '<p class="mt-1" style="color: red;"><i>' . $errors['account'] . '</i></p>'; endif; ?>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-6 form-floating mb-5">
+                        <input class="form-control rounded-0 login-input" type="password" placeholder="password"
+                            name="password">
+                        <label>Password:</label>
+                        <?php if(isset($errors['password'])) : echo '<p class="mt-1" style="color: red;"><i>' . $errors['password'] . '</i></p>'; endif; ?>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href=""><i><u>Forget your password</u></i></a>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-6 my-5">
+                        <button type="submit" class="btn btn-dark container-fluid" style="height: 3em;"
+                            name="login">SIGN IN</button>
+                        <?php if(isset($errors['log-in-fail'])) : echo '<p class="mt-2" style="color: red;"><i>' . $errors['log-in-fail'] . '</i></p>'; endif; ?>
+                    </div>
 
-                <div class="col-6 text-start">
-                    <p><i class="mx-1">Don't have an account yet?</i></p>
-                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">Sign up</button>
+                    <div class="col-6 text-start">
+                        <p><i class="mx-1">Don't have an account yet?</i><button class="btn btn-link mx-1" type="submit" name="signup">Sign up</button></p>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </main><!-- End #main -->
 
     <?php include('./templates/footer.php'); ?>
-
-    <!-- Modal Register -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="registerModalLabel">Register Form</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="row d-flex flex-column justify-content-center align-items-center">
-                <div class="col-12 form-floating mb-3">
-                    <input class="form-control rounded-0 login-input bg-white" type="text" placeholder="username">
-                    <label>Username:</label>
-                </div>
-                <div class="col-12 form-floating mb-3">
-                    <input class="form-control rounded-0 login-input bg-white" type="email" placeholder="e-mail">
-                    <label>E-Mail:</label>
-                </div>
-                <div class="col-12 form-floating mb-3">
-                    <input class="form-control rounded-0 login-input bg-white" type="password" placeholder="password">
-                    <label>Password:</label>
-                </div>
-                <div class="col-12 form-floating mb-5">
-                    <input class="form-control rounded-0 login-input bg-white" type="password" placeholder="confirm-password">
-                    <label>Confirm Password:</label>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark">Register</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

@@ -1,0 +1,112 @@
+<?php include('./php-control/register.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic & Lighting</title>
+
+    <!-- Favicons -->
+    <link href="./assets/img/favicon.png" rel="icon">
+    <link href="./assets/img/favicon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="./assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="./assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendor/bootstrap-icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="./assets/vendor/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Template Main CSS File -->
+    <link href="./assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <main id="main">
+        <div class="container">
+            <a href="index.html" class="d-flex justify-content-center logo me-lg-0 mt-3">
+                <img src="./assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
+            </a>
+
+            <form method="POST" role="form">
+                <div class="row d-flex flex-column justify-content-center align-items-center mt-3">
+                    <h1 class="text-center">Register Form</h1>
+                    <div class="mt-5"></div>
+                    <div class="row mb-3">
+                        <div class="col-6 form-floating">
+                            <input class="form-control rounded-0 login-input bg-white" type="text" placeholder="firstname" name="firstname">
+                            <label>First Name:</label>
+                            <?php if(isset($errors['firstname'])) : echo '<p style="color: red;">' . $errors['firstname'] . '</p>'; endif; ?>
+                        </div>
+                        <div class="col-6 form-floating">
+                            <input class="form-control rounded-0 login-input bg-white" type="text" placeholder="lastname" name="lastname">
+                            <label>Last Name:</label>
+                            <?php if(isset($errors['lastname'])) : echo '<p style="color: red;">' . $errors['lastname'] . '</p>'; endif; ?>
+                        </div>
+                    </div>
+                    <div class="col-12 form-floating mb-3">
+                        <input class="form-control rounded-0 login-input bg-white" type="text" placeholder="username" name="username">
+                        <label>Username:</label>
+                        <?php if(isset($errors['username'])) : echo '<p style="color: red;">' . $errors['username'] . '</p>'; endif; ?>
+                    </div>
+                    <div class="col-12 form-floating mb-3">
+                        <input class="form-control rounded-0 login-input bg-white" type="email" placeholder="e-mail" name="email">
+                        <label>E-Mail:</label>
+                        <?php if(isset($errors['email'])) : echo '<p style="color: red;">' . $errors['email'] . '</p>'; endif; ?>
+                    </div>
+                    <div class="col-12 form-floating mb-3">
+                        <input class="form-control rounded-0 login-input bg-white" type="text" placeholder="address" name="address">
+                        <label>Address:</label>
+                        <?php if(isset($errors['address'])) : echo '<p style="color: red;">' . $errors['address'] . '</p>'; endif; ?>
+                    </div>
+                    <div class="col-12 form-floating mb-3">
+                        <input class="form-control rounded-0 login-input bg-white" type="password" placeholder="password" name="userpassword">
+                        <label>Password:</label>
+                        <?php if(isset($errors['userpassword'])) : echo '<p style="color: red;">' . $errors['userpassword'] . '</p>'; endif; ?>
+                    </div>
+                    <div class="col-12 form-floating mb-5">
+                        <input class="form-control rounded-0 login-input bg-white" type="password" placeholder="confirm-password" name="confirm-password">
+                        <label>Confirm Password:</label>
+                        <?php if(isset($errors['confirm-password'])) : echo '<p style="color: red;">' . $errors['confirm-password'] . '</p>'; endif; ?>
+                    </div>
+                    <div class="d-flex justify-content-between mb-5">
+                        <button type="reset" class="btn btn-lg btn-black col-2">Reset</button>
+                        <button type="submit" class="btn btn-lg btn-outline-dark col-4" name="register">Register</button>
+                    </div>
+                    <div class="text-center mb-3">
+                        <p>
+                            <button type="submit" class="btn btn-link" name="getbacksignin"><i class="bi bi-arrow-up-left-circle"></i> Go back to Sign in page</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main><!-- End #main -->
+
+    <?php include('./templates/footer.php'); ?>
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="./assets/vendor/aos/aos.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/vendor/masonry/masonry.pkgd.min.js"></script>
+
+    <!-- Main JavaScript File -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,6 @@
  * Date: 10/08/2022
  * Time: 2:45 PM
  */
-$connect = null;
 
 // Include File Config Database
 include('./php-control/config.php');

@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 -- Cơ sở dữ liệu: `chiclighting`
 --
 
+CREATE DATABASE IF NOT EXISTS `chic_lighting`;
+USE `chic_lighting`;
+
 -- --------------------------------------------------------
 
 --

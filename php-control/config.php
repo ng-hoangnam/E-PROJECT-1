@@ -7,7 +7,7 @@
  */
 
 //Config Database
-$connect = mysqli_connect('localhost', 'root', '', 'chiclighting');
+$connect = new mysqli('localhost', 'root', '', 'chic_lighting');
 
 if ($connect === false) {
     die("ERROR: Could not connect..." . $connect->connect_error);
