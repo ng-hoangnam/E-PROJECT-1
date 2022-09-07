@@ -8,7 +8,7 @@
 --------------------------------------------------------------*/
 body {
     font-family: "Open Sans", sans-serif;
-    background: #f1f1f1;
+    background: #fff;
     color: #000;
 }
 
@@ -1064,14 +1064,14 @@ section {
   # Footer
   --------------------------------------------------------------*/
 #footer {
-    background: #f1f1f1;
+    background: #fff;
     padding: 0 0 30px 0;
     color: #000;
     font-size: 14px;
 }
 
 #footer .footer-top {
-    background: #f1f1f1;
+    background: #fff;
     border-top: 1px solid #37332a;
     padding: 60px 0 30px 0;
 }
@@ -1188,7 +1188,6 @@ section {
     border: none !important;
     border-bottom: 1px solid #e1e1e1 !important;
     box-shadow: none !important;
-    background-color: #f1f1f1;
 }
 
 .login-input:hover {
@@ -1197,7 +1196,6 @@ section {
 
 .login-input:focus {
     border-bottom: 3px solid #ffca2c !important;
-    background-color: #f1f1f1;
 }
 
 .login-input~label {
