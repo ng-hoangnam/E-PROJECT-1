@@ -1,4 +1,5 @@
 <?php
+    include('./php-control/login.php');
     echo '
         <!-- ======= Top Bar ======= -->
         <div id="topbar" class="d-flex align-items-center fixed-top">
@@ -48,9 +49,6 @@
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
-                <a href="./login.html" class="btn btn-outline-dark d-none d-lg-flex">Sign In</a>
-
             </div>
-        </header><!-- End Header -->
-    ';
+        </header><!-- End Header -->';
 ?>

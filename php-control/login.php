@@ -3,12 +3,6 @@
     include('./php-control/config.php');
     session_start();
 
-    // Check Session to block turning to studentDB without log-in
-    // if (isset($_SESSION['username'])) {
-    //     header('Location: studentDB.html');
-    //     exit;
-    // }
-
     // Validate Log-in Form
     $errors = array();
 
@@ -42,18 +36,18 @@
                 $_SESSION['username'] = $user['user_name'];
                 $_SESSION['customer_name'] = $user['first_name'] . ' ' .  $user['last_name'];
                 
-                // Set up Cookie for Remember-me checkbox
-                if (!empty($_POST['remember'])) {
-                    setcookie('account', $account, time()+(10*365*24*60*60));
-                    setcookie('password', $password, time()+(10*365*24*60*60));
-                } else {
-                    if(isset($_COOKIE['account'])) {
-                        setcookie('account','');
-                    };
-                    if(isset($_COOKIE['password'])) {
-                        setcookie('password','');
-                    };
-                };
+                // // Set up Cookie for Remember-me checkbox
+                // if (!empty($_POST['remember'])) {
+                //     setcookie('account', $account, time()+(10*365*24*60*60));
+                //     setcookie('password', $password, time()+(10*365*24*60*60));
+                // } else {
+                //     if(isset($_COOKIE['account'])) {
+                //         setcookie('account','');
+                //     };
+                //     if(isset($_COOKIE['password'])) {
+                //         setcookie('password','');
+                //     };
+                // };
 
                 header('Location: index.html');
                 
