@@ -2,10 +2,12 @@
 .container a:hover{
     text-decoration: underline !important;
 }
-
+#topbar{
+    background: #f1f1f1;
+}
 .lstproduct{
     width: 20%;
-    padding-right: 50px;
+    padding: 10px 20px 0px 20px;
     border-width: 1px;
     height: 317px;
 }

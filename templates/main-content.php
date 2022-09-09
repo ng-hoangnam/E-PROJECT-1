@@ -43,24 +43,6 @@
                             <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
                           </div>
                           <div class="col-lg-6 pt-4 pt-lg-0 content">
-                            <h3>View All</h3>
-                            <p class="fst-italic">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                              magna aliqua.
-                            </p>
-                            <div class="text-end mt-4">
-                                <a href="viewall.html" class="btn btn-dark fadeInUp">Shop Now</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <div class="swiper-slide">
-                        <div class="row">
-                          <div class="col-lg-6">
-                            <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-lg-6 pt-4 pt-lg-0 content">
                             <h3>Accents</h3>
                             <p class="fst-italic">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
