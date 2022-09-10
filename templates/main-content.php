@@ -35,8 +35,8 @@
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-lg-6" style="width:24em;"> 
                                 <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
@@ -53,8 +53,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-lg-6" style="width:24em;">
                                 <img src="./assets/img/lightType/ceiling/cl1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
@@ -71,8 +71,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-lg-6" style="width:24em;">
                                 <img src="./assets/img/lightType/fan/f1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
@@ -89,8 +89,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="row d-flex justify-content-xl-between justify-content-sm-center">
+                            <div class="col-lg-6" style="width:24em;">
                                 <img src="./assets/img/lightType/Lamp/l1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
@@ -107,8 +107,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-lg-6" style="width:24em;">
                                 <img src="./assets/img/lightType/outdoor/od1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
@@ -125,8 +125,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-lg-6" style="width:24em;">
                                 <img src="./assets/img/lightType/Wall/w1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
@@ -206,7 +206,7 @@
 
         <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="row g-0" data-masonry=\'{"percentPosition": true}\'>
+            <div class="row g-0" data-masonry='{"percentPosition": true}'>
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
                         <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
