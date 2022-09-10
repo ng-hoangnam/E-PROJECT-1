@@ -46,7 +46,7 @@
                                     magna aliqua.
                                 </p>
                                 <div class="text-end mt-4">
-                                    <a href="accents.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                                    <a href="product.html" class="btn btn-dark fadeInUp">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                                     magna aliqua.
                                 </p>
                                 <div class="text-end mt-4">
-                                    <a href="ceiling.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                                    <a href="product.html" class="btn btn-dark fadeInUp">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                                     magna aliqua.
                                 </p>
                                 <div class="text-end mt-4">
-                                    <a href="fans.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                                    <a href="product.html" class="btn btn-dark fadeInUp">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                                     magna aliqua.
                                 </p>
                                 <div class="text-end mt-4">
-                                    <a href="lamp.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                                    <a href="product.html" class="btn btn-dark fadeInUp">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                     magna aliqua.
                                 </p>
                                 <div class="text-end mt-4">
-                                    <a href="outdoor.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                                    <a href="product.html" class="btn btn-dark fadeInUp">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                                     magna aliqua.
                                 </p>
                                 <div class="text-end mt-4">
-                                    <a href="wall.html" class="btn btn-dark fadeInUp">Shop Now</a>
+                                    <a href="product.html" class="btn btn-dark fadeInUp">Shop Now</a>
                                 </div>
                             </div>
                         </div>

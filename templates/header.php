@@ -22,7 +22,7 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
                 <li><a class="nav-link" href="./index.html">Home</a></li>
-                <li><a class="nav-link" href="./viewall.html">Products</a></li>
+                <li><a class="nav-link" href="./product.html">Products</a></li>
                 <li><a class="nav-link" href="./about.html">About</a></li>
                 <li><a class="nav-link" href="./contact.html">Contact</a></li>
             </ul>
