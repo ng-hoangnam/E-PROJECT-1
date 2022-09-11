@@ -1206,3 +1206,7 @@ section {
 .login-input:focus~label {
     transform: scale(.65) translateY(-1rem) translateX(0.65rem) !important;
 }
+
+/*--------------------------------------------------------------
+  # Product Template
+  --------------------------------------------------------------*/

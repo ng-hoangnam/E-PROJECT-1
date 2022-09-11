@@ -88,10 +88,7 @@
 .activetype{
     text-decoration: underline  !important;
 }
-.container{
-    max-width: 100%;
-    font-family: "Open Sans", sans-serif !important;
-}
+
 .position-relative{
     margin-top: 200px;
 }
