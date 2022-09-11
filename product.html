@@ -1974,22 +1974,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.shopcard').isotope({
-        itemSelector: '.card'
-      });
-      $('.lstproduct ul li').click(function(event){
-        var type = $(this).attr('data-type');
-        var type_name = $(this).text();
-        $('h6').text(type_name);
-        type = '.'+type;
-        $('.shopcard').isotope({
-          filter:type
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>

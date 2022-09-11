@@ -188,5 +188,20 @@
       mirror: false
     })
   });
-
+  // add isotope
+  $(document).ready(function(){
+    $('.shopcard').isotope({
+      itemSelector: '.card'
+    });
+    $('.lstproduct ul li').click(function(event){
+      var type = $(this).attr('data-type');
+      var type_name = $(this).text();
+      $('h6').text(type_name);
+      type = '.'+type;
+      $('.shopcard').isotope({
+        filter:type
+      });
+    });
+  });
+  // end isotope
 })();
