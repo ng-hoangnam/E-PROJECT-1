@@ -188,6 +188,7 @@
       mirror: false
     })
   });
+  
   // add isotope
   $(document).ready(function(){
     $('.shopcard').isotope({
