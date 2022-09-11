@@ -22,6 +22,9 @@
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.lstproduct ul a:focus{
+    text-decoration: underline !important;
+}
 .lstproduct a:hover{
     color: #B7A45C;
 }
