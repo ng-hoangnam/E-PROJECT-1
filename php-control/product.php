@@ -9,6 +9,6 @@
 // Include File Config Database
 include('./php-control/config.php');
 
-$list = select_list("SELECT * FROM Product");
-var_dump($list);
+session_start();
+
 ?>

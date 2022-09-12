@@ -26,6 +26,8 @@
         
         if (empty($_POST['email'])) {
             $errors['email'] = 'Email cannot empty';
+        } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+            $errors['email'] = 'Email must follow this format: your-email@mail.com';
         }; 
         
         if (empty($_POST['userpassword'])) {
@@ -35,7 +37,7 @@
         };
         
         if (empty($_POST['confirm-password'])) {
-            $errors['confirm-password'] = 'Repeat Password cannot empty';
+            $errors['confirm-password'] = 'Confirm Password cannot empty';
         } elseif ($_POST['confirm-password'] !== $_POST['userpassword']) {
             $errors['confirm-password'] = 'Password does not match! Try again';
         };
@@ -57,6 +59,7 @@
             $EMAIL_RES = $connect->real_escape_string($email);
             $PASSWORD_RES = $connect->real_escape_string($user_password);
                 $PASSWORD_HASH = sha1($PASSWORD_RES);
+            $CRT_DATE = date("d/m/Y");
             
             $data = array(
                 "USERID" => "DEFAULT",
@@ -66,6 +69,7 @@
                 "EMAIL" => $EMAIL_RES,
                 "USERNAME" => $USERNAME_RES,
                 "PASSWORD" => $PASSWORD_HASH,
+                "CRTDATE" => $CRT_DATE,
             );
 
             $insertRegData = insert_data('users', $data);

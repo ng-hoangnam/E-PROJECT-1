@@ -33,8 +33,11 @@
 
             if($result->num_rows > 0) {
                 $user = $result->fetch_assoc();
-                $_SESSION['username'] = $user['user_name'];
-                $_SESSION['customer_name'] = $user['first_name'] . ' ' .  $user['last_name'];
+
+                var_dump($user);
+                
+                $_SESSION['username'] = $user['USERNAME'];
+                $_SESSION['customer_name'] = $user['FIRSTNAME'] . ' ' .  $user['LASTNAME'];
                 
                 // // Set up Cookie for Remember-me checkbox
                 // if (!empty($_POST['remember'])) {
@@ -49,7 +52,7 @@
                 //     };
                 // };
 
-                header('Location: index.html');
+                header('Location: product.html');
                 
             } else {
                 $errors['log-in-fail'] = '*Wrong username or password';
@@ -59,7 +62,7 @@
 
     // Directional - Turn to Register Form
     if (isset($_POST['signup'])) {
-        header('Location: ./register.html');
+        header('Location: register.html');
         exit;
     };
 ?>
