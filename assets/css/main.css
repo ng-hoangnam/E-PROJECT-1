@@ -1420,12 +1420,12 @@ section {
         min-width: 0 !important;
     }
     .lstproduct{
-        padding: 0;
+        padding: 10px;
         width: 30%;
         height: 200px;
     }
     .lstproduct a{
-        font-size: 9px;
+        font-size: 8px;
     }
     .lstproduct ul{
         padding-left: 5px;
@@ -1491,7 +1491,7 @@ section {
         margin-left: 7%;
     }
     .login i{
-        font-size: 24px !important;
+        font-size: 19px !important;
     }
     .dropdown ul{
         width: 0;
@@ -1500,12 +1500,12 @@ section {
         min-width: 0 !important;
     }
     .lstproduct{
-        padding: 0;
+        padding: 10px;
         width: 30%;
         height: 252px;
     }
     .lstproduct a{
-        font-size: 14px;
+        font-size: 12px;
     }
     .lstproduct ul{
         padding-left: 32px;
