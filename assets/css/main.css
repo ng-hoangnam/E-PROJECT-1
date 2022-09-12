@@ -1451,7 +1451,7 @@ section {
     .card-text{
         font-size: 7px;
     }
-    .bi-heart{
+    .card-body .bi-heart{
         font-size: 8px;
         height: auto;
     }
