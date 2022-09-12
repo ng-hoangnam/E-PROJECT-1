@@ -1211,7 +1211,7 @@ section {
   # Product Template
   --------------------------------------------------------------*/
 /* product header */
-input[type = search]{
+.header input[type = search]{
     color: #222222;
     background: transparent;
     border-style: solid;
@@ -1221,7 +1221,7 @@ input[type = search]{
     height: 35px;
     border-width: 1px;
 }
-input[type = search]:focus{
+.header input[type = search]:focus{
 
     outline: none;
 }
@@ -1397,9 +1397,9 @@ input[type = search]:focus{
     .header > div{
         width: 17%;
     }
-    input[type=text],.bi-search{
-        font-size: 9px;
-        height: 30px;
+    .header input[type=search],.bi-search{
+        font-size: 8px;
+        height: 26px;
     }
     .logo img{
         height: 36px;
@@ -1477,9 +1477,9 @@ input[type = search]:focus{
     .header > div{
         width: 17%;
     }
-    input[type=text],.bi-search{
+    input[type=search],.bi-search{
         font-size: 14px;
-        height: 30px;
+        height: 35px;
     }
     .logo img{
         height: 64px;
