@@ -1211,7 +1211,7 @@ section {
   # Product Template
   --------------------------------------------------------------*/
 /* product header */
-input[type = text]{
+input[type = search]{
     color: #222222;
     background: transparent;
     border-style: solid;
@@ -1221,7 +1221,7 @@ input[type = text]{
     height: 35px;
     border-width: 1px;
 }
-input[type = text]:focus{
+input[type = search]:focus{
 
     outline: none;
 }
