@@ -1282,9 +1282,9 @@ section {
     right: 0 !important;
     left: 0 !important;
     position: relative !important;
-    height: 400px !important;
+    height: auto !important;
     background-color: white;
-    padding: 0px 13px 30px 13px;
+    padding: 0px 13px 61px 13px;
     border-color: white;
 }
 .lstproduct{
@@ -1304,7 +1304,7 @@ section {
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.lstproduct ul a:hover{
+.lstproduct ul a:hover, .shopcard a:hover{
     text-decoration: underline !important;
 }
 
@@ -1340,18 +1340,17 @@ section {
 
 }
 
-.card-img-top{
+/* .card-img-top{
     border-radius: 0%;
 
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
-}
+} */
 
 .card-body{
     padding: 3%;
 }
 .card-title{
     margin-bottom: 1%;
-    max-width: 60%;
 }
 .card-text{
     font-style: italic;
@@ -1362,7 +1361,7 @@ section {
     color: black;
     border-color: transparent;
     position: sticky;
-    height: auto;
+    height: 30px;
 }
 .card-body .bi-heart:focus, .productinfor .bi-heart:focus{
    color: red;
@@ -1376,7 +1375,7 @@ section {
     z-index: 1;
 }
 
-.login > ul{
+.login > div{
    width: 100%;
 }
 .navbar .dropdown ul {
@@ -1403,9 +1402,6 @@ section {
     }
     .logo img{
         height: 36px;
-    }
-    .header .navbar > ul{
-        display: flex;
     }
     .header > a{
         margin-left: 7%;
@@ -1440,9 +1436,6 @@ section {
     
     .shopcard{
         grid-template-columns: 50% 50%;
-    }
-    .card{
-        height: 231px !important;
     }
     .card-title{
         max-width: 100%;
@@ -1521,9 +1514,7 @@ section {
     .shopcard{
         grid-template-columns: 33% 33% 33%;
     }
-    .card{
-        height: 240px !important;
-    }
+   
     .card-title{
         max-width: 100%;
         font-size: 12px;
