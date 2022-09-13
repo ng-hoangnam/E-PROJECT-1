@@ -189,7 +189,9 @@
     })
   });
   
-  // add isotope
+  /**
+   * Animation on scroll
+   */
   $(document).ready(function(){
     $('.shopcard').isotope({
       itemSelector: '.card'
@@ -204,5 +206,5 @@
       });
     });
   });
-  // end isotope
+  
 })();

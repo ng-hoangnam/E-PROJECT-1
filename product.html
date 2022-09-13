@@ -127,8 +127,8 @@
           <?php 
             foreach($product_list as $key => $product) {
               echo '
-              <div class="card '. $product['BRANDNAME'] .' viewall" id="'. $product['PRODUCTID'] .'">
-                <div class="card-img gallery-item">
+              <div class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" id="'. $product['PRODUCTID'] .'">
+                <div class="card-img gallery-item '. $product['STATUS'] .'">
                   <a href=""><img src="'. $product['SOURCE'] . '" class="card-img-top" alt="..."></a>
                 </div>
                 <div class="card-body">
@@ -138,8 +138,10 @@
                     </a>
                     <button type="button" class="bi bi-cart" title="add to cart"></button>
                   </div>
-                  <p class="card-text '. $product['STATUS'] .'">$ '. $product['PRICE'] .'</p>
-                  <p class="card-sale '. $product['STATUS'] .'">Sale off to $ '. $product['SALEPRICE'] .'</p>
+                  <p class="card-price">
+                    $ '. $product['PRICE'] .'
+                    <span class="card-sale-price '. $product['STATUS'] .'">Sale off to: $ '. $product['SALEPRICE'] .'</span>
+                  </p>
                 </div>
               </div>';
             };
