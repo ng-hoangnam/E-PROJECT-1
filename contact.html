@@ -1,3 +1,4 @@
+<?php include('./php-control/feedback.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,26 +64,32 @@
                     <div class="col-lg-8 mt-5 mt-lg-0">
 
                         <form method="post" role="form" class="php-email-form">
-                            <div class="row">
-                                <p class="text-center">How satisfied are you with our company overall?</p>
-                                <div class="col-sm-12 form-group text-center">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="experience" value="good">
-                                        Good
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="experience" value="average">
-                                        Average
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="experience" value="bad">
-                                        Bad
-                                    </label>
+                            <div class="row mb-2">
+                                <p class="text-center"><i>How satisfied are you with our company overall?</i></p>
+                                <div class="d-flex justify-content-center">
+                                    <div class="form-check mx-2">
+                                        <input class="form-check-input" type="radio" name="experience" value="good">
+                                        <label class="form-check-label">
+                                            <i>Good</i>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mx-2">
+                                        <input class="form-check-input" type="radio" name="experience" value="average">
+                                        <label class="form-check-label">
+                                            <i>Average</i>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mx-2">
+                                        <input class="form-check-input" type="radio" name="experience" value="bad">
+                                        <label class="form-check-label">
+                                            <i>Bad</i>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name"
+                                    <input type="text" class="form-control" name="name" id="name"
                                         placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6 form-group mt-3 mt-md-0">
@@ -91,11 +98,7 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    placeholder="Subject" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="8" placeholder="Message"
+                                <textarea class="form-control" name="comments" rows="8" placeholder="Message"
                                     required></textarea>
                             </div>
                             <div class="my-3">

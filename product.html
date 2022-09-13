@@ -51,10 +51,9 @@
       <!-- end logo -->
 
       <!-- navbar login -->
-      <div class="navicon">
-        <nav class="navbar login">
-          <div class="d-flex justify-content-end">
-            <?php 
+      <nav class="navbar login">
+        <div class="d-flex justify-content-end">
+          <?php 
               if(!isset($_SESSION['username'])) {
                 echo '
                 <div class="dropdown"><a href="./login.html" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i
@@ -67,13 +66,12 @@
                 ';
               }
             ?>
-            
-            <div class="dropdown" style="margin-left: 51%;"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i
-                  class="bi bi bi-cart" style="font-size: 30px;"></i></a>
-            </div>
+
+          <div class="dropdown" style="margin-left: 51%;"><a href="" class="nav-link scrollto"
+              style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
       <!-- end navbar login -->
     </div>
   </div>

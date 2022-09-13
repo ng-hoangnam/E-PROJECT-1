@@ -1006,7 +1006,7 @@ section {
     animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
+.contact .php-email-form input:not([type="radio"]),
 .contact .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
@@ -1016,12 +1016,12 @@ section {
     resize: none;
 }
 
-.contact .php-email-form input::-moz-placeholder,
+.contact .php-email-form input:not([type="radio"])::-moz-placeholder,
 .contact .php-email-form textarea::-moz-placeholder {
     color: #888;
 }
 
-.contact .php-email-form input::placeholder,
+.contact .php-email-form input:not([type="radio"])::placeholder,
 .contact .php-email-form textarea::placeholder {
     color: #888;
 }
@@ -1031,7 +1031,7 @@ section {
     border-color: #000;
 }
 
-.contact .php-email-form input {
+.contact .php-email-form input:not([type="radio"]) {
     height: 44px;
 }
 
@@ -1378,7 +1378,7 @@ section {
    width: 100%;
 }
 .navbar .dropdown ul {
-    left: -206% !important;
+    left: -240% !important;
     border: solid !important;
     color: black !important;
     border-color: black !important;
