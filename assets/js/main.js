@@ -205,6 +205,13 @@
         filter:type
       });
     });
+    $('.filterbt').click(function(event){
+      var type = $(this).attr('data-type');
+      type = '.'+type; 
+      $('.shopcard').isotope({
+        filter:type
+      });
+    });
   });
   
 })();
