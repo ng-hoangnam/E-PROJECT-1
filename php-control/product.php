@@ -11,4 +11,8 @@ include('./php-control/config.php');
 
 session_start();
 
+$sql = "SELECT * FROM products A JOIN brands B ON A.BRANDID = B.BRANDID";
+$product_list = select_list($sql);
+
+
 ?>

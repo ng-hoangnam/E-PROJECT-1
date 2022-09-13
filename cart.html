@@ -1,0 +1,95 @@
+<?php include('./php-control/product.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include('./templates/main-head.php'); ?>
+
+</head>
+
+<body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-phone d-flex align-items-center"><span>+84 85 247 0666</span></i>
+                <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 9AM - 23PM</span></i>
+            </div>
+
+            <?php
+        if(isset($_SESSION['username'])) { 
+          echo '
+          <div>
+            <b>Xin chao, ' . $_SESSION['customer_name'] . '</b>
+          </div>';
+        };
+      ?>
+        </div>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <div>
+        <div class="header d-flex flex-row justify-content-between align-items-center mx-4">
+
+            <!-- search bar -->
+            <div class="d-flex flex-row">
+                <div class="d-flex flex-row">
+                    <input type="search" placeholder="Search.."> <button type="button" class="bi bi-search"></button>
+                </div>
+            </div>
+            <!-- end search bar -->
+
+
+            <!-- logo -->
+            <div class="container d-flex justify-content-center" style="margin-right: 8em;">
+                <a href="index.html" class="logo me-lg-0">
+                    <img src="assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
+                </a>
+            </div>
+            <!-- end logo -->
+
+            <!-- navbar login -->
+            <nav class="navbar login">
+                <div class="d-flex justify-content-end">
+                    <?php 
+                        if(!isset($_SESSION['username'])) {
+                            echo '
+                                <div class="dropdown"><a href="./login.html" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i
+                                class="bi bi bi-person" style="font-size: 30px;"></i></a>
+                                    <ul>
+                                        <li><a href="./login.html">Sign In</a></li>
+                                        <li><a href="./register.html">Register</a></li>
+                                    </ul>
+                                </div>';
+                        }
+                    ?>
+
+                    <div class="dropdown" style="margin-left: 51%;"><a href="" class="nav-link scrollto"
+                            style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart"
+                                style="font-size: 30px;"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <!-- end navbar login -->
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div id="cart">
+        <div class="d-flex flex-column align-items-center my-5">
+            <b>(0)</b>
+            <i>You haven't added any product yet</i>
+            <p>Figure out more from <a class="btn-link" href="./product.html">Our Product</a></p>
+        </div>
+    </div>
+
+    <?php include('./templates/footer.php'); ?>
+
+    <?php include('./templates/link-script.php'); ?>
+</body>
+
+</html>
