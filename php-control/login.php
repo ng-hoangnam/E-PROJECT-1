@@ -2,7 +2,7 @@
     // Include File Config Database
     include('./php-control/config.php');
     session_start();
-
+    $connect = null;
     // Validate Log-in Form
     $errors = array();
 
@@ -52,7 +52,7 @@
                 //     };
                 // };
 
-                header('Location: product.html');
+                header('Location: admin/index.html');
                 
             } else {
                 $errors['log-in-fail'] = '*Wrong username or password';
