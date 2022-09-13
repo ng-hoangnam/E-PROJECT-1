@@ -1265,7 +1265,7 @@ section {
     background-color: #F0EFED;
 }
 .navicon{
-    width: 15%;
+    width: 13%;
 }
 .navicon .navbar{
     width: 100%;
@@ -1356,16 +1356,15 @@ section {
     font-style: italic;
     font-size: 12px;
 }
-.card-body .bi-heart, .productinfor .bi-heart{
+.card-body .bi-cart, .productinfor .bi-cart{
     background: transparent;
     color: black;
     border-color: transparent;
     position: sticky;
     height: 30px;
+    font-size: 21px;
 }
-.card-body .bi-heart:focus, .productinfor .bi-heart:focus{
-   color: red;
-}
+
 .header{
     border-style: solid;
     border-color: transparent;
@@ -1444,7 +1443,7 @@ section {
     .card-text{
         font-size: 7px;
     }
-    .card-body .bi-heart{
+    .card-body .bi-cart{
         font-size: 8px;
         height: auto;
     }
