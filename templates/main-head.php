@@ -20,3 +20,9 @@
 
 <!-- Template Main CSS File -->
 <link href="./assets/css/main.css" rel="stylesheet">
+
+<!-- CDN Sweet Alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!-- CDN JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -77,7 +77,7 @@
             if ($insertRegData == TRUE) {
                 echo '
                     <script type="text/javascript">
-                        alert("Sign up successfully");
+                        alert("Sign up successfully!");
                     </script>';
             };
         };

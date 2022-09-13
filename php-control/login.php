@@ -52,7 +52,7 @@
                 //     };
                 // };
 
-                header('Location: index.html');
+                header('Location: product.html');
                 
             } else {
                 $errors['log-in-fail'] = '*Wrong username or password';

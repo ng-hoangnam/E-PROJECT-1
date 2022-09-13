@@ -1347,13 +1347,13 @@ section {
 } */
 
 .card.bestseller::after {
-    content: "#B";
+    content: "#Best";
     position: absolute;
     display: block;
     top: -4px;
     left: 2em;
     width: 4em;
-    height: 3em;
+    height: 2em;
     background-color: #FF8E00;
     text-align: center;
     color: #fff;

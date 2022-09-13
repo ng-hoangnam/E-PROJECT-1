@@ -45,21 +45,27 @@ if (isset($_POST['feedback'])) {
         if ($var == TRUE) {
             echo '
                     <script type="text/javascript">
-                        alert("Thank you for your feedback!");
+                        Swal.fire({
+                            position: \'top-end\',
+                            icon: \'success\',
+                            title: \'Your work has been saved\',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                     </script>';
 
         } else {
             echo '
                     <script type="text/javascript">
-                        alert("Error");
+                    Swal.fire({
+                        position: \'top-end\',
+                        icon: \'fail\',
+                        title: \'Something went wrong!\',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                     </script>';
         }
     }
-
-    //Quay lai trang index
-//    if ($connect->query($insertData) == TRUE) {
-//        header('Location: index.html');
-//        exit;
-//    }
-
-}
+};
+?>
