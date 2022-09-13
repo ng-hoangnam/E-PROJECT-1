@@ -118,9 +118,8 @@
         </div>
         <div class="d-flex flex-row mt-4 mb-5 stickyelm lstfilterbtn">
           <button type="button" class="bi bi-filter"> FILTER </button>
-          <button type="button" class="filterbt">PICKUP</button>
-          <button type="button" class="filterbt">READY TO SHIP</button>
-          <button type="button" class="filterbt">SHIP WITHIN 6 WEEKS</button>
+          <button type="button" class="filterbt">BEST SELLER</button>
+          <button type="button" class="filterbt">SALE</button>
           <button type="button" class="filterbt" style="background-color: black; color: white ;">VIEW ALL</button>
         </div>
         <!-- shopping card -->
@@ -139,7 +138,8 @@
                     </a>
                     <button type="button" class="bi bi-cart" title="add to cart"></button>
                   </div>
-                  <p class="card-text">$ '. $product['PRICE'] .'</p>
+                  <p class="card-text '. $product['STATUS'] .'">$ '. $product['PRICE'] .'</p>
+                  <p class="card-sale '. $product['STATUS'] .'">Sale off to $ '. $product['SALEPRICE'] .'</p>
                 </div>
               </div>';
             };

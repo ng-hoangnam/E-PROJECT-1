@@ -1356,7 +1356,31 @@ section {
 .card-text{
     font-style: italic;
     font-size: 12px;
+    position: relative;
 }
+
+.card-sale {
+    display: none;
+    color: red;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.sale {
+    display: block !important;
+}
+
+.sale::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    width: 32px;
+    height: 1px;
+    background-color: red;
+    opacity: 0.5;
+}
+
 .card-body .bi-cart, .productinfor .bi-cart{
     background: transparent;
     color: black;
