@@ -162,7 +162,7 @@ CREATE TABLE `products` (
   `CRTDATE` date DEFAULT NULL,
   `MDFUSER` varchar(25) DEFAULT NULL,
   `MDFDATE` date DEFAULT NULL,
-  `SOURCE` varchar(100) NULL,
+  `SOURCE` varchar(100) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

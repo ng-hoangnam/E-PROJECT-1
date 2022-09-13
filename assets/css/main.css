@@ -1350,6 +1350,7 @@ section {
     padding: 3%;
 }
 .card-title{
+    font-size: 13px;
     margin-bottom: 1%;
 }
 .card-text{
@@ -1517,6 +1518,10 @@ section {
     .card-title{
         max-width: 100%;
         font-size: 12px;
+    }
+    .card-body .bi-cart{
+        font-size: 14px;
+        height: auto;
     }
     .filterbt{
         width: 19%;
