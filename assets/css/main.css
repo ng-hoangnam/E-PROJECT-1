@@ -1463,14 +1463,13 @@ section {
     }
     .card-title{
         max-width: 100%;
-        font-size: 8px;
+        font-size: 6px;
     }
     .card-text{
         font-size: 7px;
     }
     .card-body .bi-cart{
         font-size: 8px;
-        height: auto;
     }
     .filterbt{
         width: 18%;
@@ -1541,11 +1540,10 @@ section {
    
     .card-title{
         max-width: 100%;
-        font-size: 12px;
+        font-size: 10px;
     }
     .card-body .bi-cart{
         font-size: 14px;
-        height: auto;
     }
     .filterbt{
         width: 19%;
