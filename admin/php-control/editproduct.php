@@ -1,5 +1,7 @@
 <?php
-
+if(!isset($_SESSION['logined'])){
+    header('location:login.html');
+}
 include_once('config.php');
 // Check link
 if (!isset($_GET['id'])) {
