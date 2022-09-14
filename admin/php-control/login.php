@@ -1,4 +1,5 @@
-<?php 
+<?php
+    include_once('config.php');
     if(isset($_POST['login'])){
         $errors = [] ;
 
@@ -18,8 +19,17 @@
         }
 
         if(empty($errors)){
-            $check_login = "SELECT * FROM admin WHERE username = '$username' && password = '$password'";
-            
+            $hash_pass = sha1($password);
+            $check_login = "SELECT * FROM admin WHERE username = '$username' && password = '$hash_pass'";
+            $result = $conn->query($check_login);
+            $row = mysqli_num_rows($result);
+            if($row > 0 ){
+                $_SESSION['logined'] = $username ;
+                header('location:index.html');
+            }else{
+                $errors['username'] = 'Wrong username or password';
+                $errors['password'] = 'Wrong username or password';
+            }
         }
     }
 ?>

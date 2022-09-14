@@ -1,4 +1,5 @@
 <?php
+
 include_once('config.php');
 // Check link
 if (!isset($_GET['id'])) {
