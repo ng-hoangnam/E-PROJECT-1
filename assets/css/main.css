@@ -1210,6 +1210,9 @@ section {
 /*--------------------------------------------------------------
   # Product Template
   --------------------------------------------------------------*/
+#product {
+    margin-top: 115px;
+}
 /* product header */
 .header input[type = search]{
     color: #222222;
@@ -1318,7 +1321,7 @@ section {
 }
 .stickyelm{
   position: sticky;
-  top: 0;
+  top: 71px;
 }
 .mainproduct{
     width: 100%;
@@ -1714,5 +1717,6 @@ input[type = submit]{
   # Shopping Cart Template
   --------------------------------------------------------------*/
   #cart {
+    margin-top: 155px;
     min-height: 30em;
   }
