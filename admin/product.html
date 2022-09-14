@@ -56,7 +56,7 @@
                                 <?php echo $val_selectproduct['PRODUCTNAME'] ?>
                             </td>
                             <td>
-                                <?php echo $val_selectproduct['BRANDID'] ?>
+                                <?php echo $val_selectproduct['BRANDNAME'] ?>
                             </td>
                             <td>
                                 <?php echo $val_selectproduct['PRICE'] ?>
@@ -71,7 +71,7 @@
                                 <?php echo $val_selectproduct['STATUS'] ?>
                             </td>
                             <td>
-                                <button>Edit</button>
+                                <a class="btn btn-warning" href="./editproduct.html?id=<?php echo $val_selectproduct['PRODUCTID'] ?>">EDIT</a>
                                 <br>
                                 <button type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#exampleModal<?php echo $val_selectproduct['PRODUCTID'] ?>">Delete</button>
@@ -94,6 +94,7 @@
                                             <br>
                                             <span class="text-danger">Delete product : </span>
                                             <?php echo $val_selectproduct['PRODUCTNAME'] ?>
+                                            <input type="text" name="delete" value="<?php echo $val_selectproduct['PRODUCTID'] ?>" class="d-none">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"

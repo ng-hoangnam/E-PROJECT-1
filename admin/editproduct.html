@@ -1,0 +1,108 @@
+<?php include_once('./php-control/editproduct.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php include_once('./templates/head.html') ?>
+</head>
+
+<body>
+    <?php include_once('./templates/nav.html') ?>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Edit Product</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <form method="post" enctype="multipart/form-data">
+                    <div>
+                        <label for="">Product name :</label>
+                        <input class="form-control" type="text" name="productname" value="<?php echo $product['PRODUCTNAME'] ?>">
+                    </div>
+                    <div class="mb-3">
+
+                    </div>
+                    <div>
+                        <label for="">Quantity :</label>
+                        <input class="form-control" type="text" name="productquantity" value="<?php echo $product['QUANTITY'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        
+                    </div>
+                    <div>
+                        <label for="">Price :</label>
+                        <input class="form-control" type="text" name="productprice" value="<?php echo $product['PRICE'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        
+                    </div>
+                    <div>
+                        <label for="">Status</label>
+                        <input class="form-control" type="text" name="productstatus" value="<?php echo $product['STATUS'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        
+                    </div>
+                    <div>
+                        <label for="">Sale Price :</label>
+                        <input class="form-control" type="text" name="productsaleprice" value="<?php echo $product['SALEPRICE'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        
+                    </div>
+                    <div>
+                        <label for="">Brand</label>
+                        <!-- <input class="form-control" type="text" name="" id=""> -->
+                        <select class="form-control" name="productbrand">
+                            <?php foreach($result_brand as $val_brand) : ?>
+                            <option 
+                                value="<?php echo $val_brand['BRANDID'] ?>"
+                                <?php 
+                                    if($val_brand['BRANDID'] == $product['BRANDID']){
+                                        echo 'selected' ;
+                                    }
+                                ?>
+                                >
+                                    <?php echo $val_brand['BRANDNAME'] ?>
+                            </option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        
+                    </div>
+                    <div>
+                        <label for="">IMG</label>
+                        <input class="form-control" type="file" name="productimg">
+                    </div>
+                    <div class="mb-3">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <img src="../<?php echo $product['SOURCE'] ?>" alt="" style="width: 15rem ;">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success" name="apply">Apply</button>
+                    </div>
+                </form>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <?php include_once('./templates/footer.html') ?>
+</body>
+
+</html>
