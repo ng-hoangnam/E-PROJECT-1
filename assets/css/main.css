@@ -1590,7 +1590,7 @@ section {
 }
 .slide {
     margin-left: 0;
-    width: 53%;
+    width: 46%;
     margin-top: 0;
     margin-bottom: 4%;
 }
@@ -1623,7 +1623,7 @@ section {
     background-color: transparent;
 }
 .maincontent .carousel-item img{
-    height: 618px;
+    height: 457px;
     width: 100%;
 }
 
