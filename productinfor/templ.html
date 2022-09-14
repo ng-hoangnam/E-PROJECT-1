@@ -19,9 +19,6 @@
     <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/stylemenu.css">
-    <link rel="stylesheet" href="../assets/css/styleproduct.css">
-    <link rel="stylesheet" href="../assets/css/productinfor.css">
     <link href="../assets/css/main.css" rel="stylesheet">
 
 </head>
@@ -39,7 +36,7 @@
   
     <!-- ======= Header ======= -->
     <div>
-      <div class="header d-flex flex-row justify-content-between align-items-center">
+      <div class="header d-flex flex-row justify-content-between align-items-center mx-4">
   
         <!-- search bar -->
         <div class="d-flex flex-row">
@@ -51,40 +48,39 @@
   
   
         <!-- logo -->
-        <a href="../index.html" class="logo me-lg-0">
-          <img src="../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
-        </a>
+        <div class="d-flex justify-content-center">
+          <a href="../index.html" class="logo me-lg-0">
+            <img src="../assets/img/favicon.png" alt="logo" class="img-fluid m-xl-1">
+          </a>
+        </div>
         <!-- end logo -->
   
         <!-- navbar login -->
-        <div class="navicon">
-          <nav class="navbar login">
-            <ul class="justify-content-between">
-              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i
+        <nav class="navbar login" style="width: 13%;">
+          <div class="d-flex justify-content-end">
+            <?php 
+                if(!isset($_SESSION['username'])) {
+                  echo '
+                  <div class="dropdown"><a href="../login.html" class="nav-link" style="padding: 0;width: 100%;height: 100%;"><i
                     class="bi bi bi-person" style="font-size: 30px;"></i></a>
-                <ul>
-                  <li><a href="../login.html">Sign In</a></li>
-                  <li><a href="../register.html">Register</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i
-                    class="bi bi bi-heart" style="font-size: 30px;"></i></a>
-                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 2</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="" class="nav-link scrollto" style="padding: 0;width: 100%;height: 100%;"><i
-                    class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
-            </ul>
-          </nav>
-        </div>
+                    <ul>
+                      <li><a href="../login.html">Sign In</a></li>
+                      <li><a href="../register.html">Register</a></li>
+                    </ul>
+                  </div>
+                  ';
+                }
+              ?>
+  
+            <div class="dropdown" style="margin-left: 28%;"><a href="./cart.html" class="nav-link"
+                style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a>
+            </div>
+          </div>
+        </nav>
         <!-- end navbar login -->
       </div>
     </div>
-    <!-- main content -->
+      <!-- main content -->
     <div class="maincontent">
       <div class="lstype text-light d-flex flex-row">
         <!-- navbar -->

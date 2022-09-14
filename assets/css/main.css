@@ -1618,6 +1618,10 @@ section {
     width: 46%;
     padding: 0% 3%;
 }
+.productinfor .bi-heart{
+    border: none;
+    background-color: transparent;
+}
 .maincontent .carousel-item img{
     height: 618px;
     width: 100%;
