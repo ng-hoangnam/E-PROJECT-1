@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
         $sql=substr($sql, 0, -1).") ORDER BY name ASC";
         $query=select_list($sql);
         $totalprice=0;
-        while($row = $query->fetch_assoc()){
+        while($row = $query){
             $subtotal=$_SESSION['CART'][$row['PRODUCTID']]['quantity']*$row['PRICE'];
             $totalprice+=$subtotal;
             ?>
