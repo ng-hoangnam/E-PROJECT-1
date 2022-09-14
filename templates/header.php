@@ -60,7 +60,8 @@
                 }
                 ?>
 
-                <div class="dropdown" style="margin-left: 28%;"><a href="./cart.html" class="nav-link" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a>
+                <div class="dropdown" style="margin-left: 28%;">
+                    <a href="./cart.html" class="nav-link" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a>
                 </div>
             </div>
         </nav>
