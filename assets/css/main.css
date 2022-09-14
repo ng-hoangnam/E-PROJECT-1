@@ -249,7 +249,7 @@ h6 {
 .navbar .dropdown ul {
     display: block;
     position: absolute;
-    left: 14px;
+    left: -1em;
     top: calc(100% + 30px);
     margin: 0;
     padding: 10px 0;
@@ -1421,15 +1421,7 @@ section {
 .login > div{
    width: 100%;
 }
-.navbar .dropdown ul {
-    left: -240% !important;
-    border: solid !important;
-    color: black !important;
-    border-color: black !important;
-    border-width: 1px !important;
-    border-radius: 0 !important;
-    box-shadow: none!important;
-}
+
 .lstfilterbtn{
     padding: 7px 105px 13px 0px;
 }

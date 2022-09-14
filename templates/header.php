@@ -45,14 +45,17 @@
                 } else {
                     echo '
                     <form method="GET">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Hi, ' . $_SESSION['customer_name'] . '
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-light">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Change Password</a></li>
-                        <li class="d-flex justify-content-end mt-4"><button class="btn btn-danger mx-2" type="submit" name="logout">Log out</button></li>
-                        </ul>
+                        <div class="dropdown">
+                            <a href="./login.html" class="nav-link" style="padding: 0;width: 100%;height: 100%;">
+                                Hi, ' . $_SESSION['customer_name'] . '
+                                <i class="bi bi-caret-down-fill"></i>
+                            </a>
+                            <ul>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Change Password</a></li>
+                                <li class="d-flex justify-content-end mt-4"><button class="btn btn-danger mx-2" type="submit" name="logout">Log out</button></li>
+                            </ul>
+                        </div>
                     </form>';
                 }
                 ?>
