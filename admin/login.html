@@ -1,0 +1,48 @@
+<?php include_once('./php-control/login.php') ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php include_once('./templates/head.html') ?>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <form method="post">
+                <div>
+                    <label for="">Username</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <span class="text-danger">
+                        <?php 
+                            if(isset($errors['username'])){
+                                echo $errors['username'];
+                            }
+                        ?>
+                    </span>
+                </div>
+                <div>
+                    <label for="">Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <span class="text-danger">
+                        <?php 
+                            if(isset($errors['password'])){
+                                echo $errors['password'];
+                            }
+                        ?>
+                    </span>
+                </div>
+                <div>
+                    <button class="btn btn-success" name="login">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php include_once('./templates/footer.html') ?>
+</body>
+
+</html>
