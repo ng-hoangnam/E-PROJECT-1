@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: Administrator <taithanh95.dev@gmail.com>
@@ -19,5 +20,3 @@ if (isset($_GET['logout'])) {
 $sql = "SELECT * FROM products A JOIN brands B ON A.BRANDID = B.BRANDID";
 $product_list = select_list($sql);
 
-
-?>

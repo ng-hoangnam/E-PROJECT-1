@@ -56,30 +56,34 @@
           <button type="button" class="bi bi-filter"> FILTER </button>
           <button type="button" class="filterbt" data-type="bestseller">BEST SELLER</button>
           <button type="button" class="filterbt" data-type="sale">SALE</button>
-          <button type="button" class="filterbt" data-type="viewall" style="background-color: black; color: white ;">VIEW ALL</button>
+          <button type="button" class="filterbt" data-type="viewall"
+            style="background-color: black; color: white ;">VIEW ALL</button>
         </div>
         <!-- shopping card -->
         <div class="shopcard gallery">
           <?php 
             foreach($product_list as $key => $product) {
               echo '
-              <div class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" id="'. $product['PRODUCTID'] .'">
-                <div class="card-img gallery-item '. $product['STATUS'] .'">
-                  <a href=""><img src="'. $product['SOURCE'] . '" class="card-img-top" alt="..."></a>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex flex-row justify-content-between">
-                    <a href="" style="width: 86%;">
-                      <p class="card-title">'. $product['PRODUCTNAME'] .'</p>
-                    </a>
-                    <button type="button" class="bi bi-cart" title="add to cart"></button>
+              <form action="" method="post">
+                <div class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" id="'. $product['PRODUCTID'] .'">
+                  <div class="card-img gallery-item '. $product['STATUS'] .'">
+                    <a href=""><img src="'. $product['SOURCE'] . '" class="card-img-top" alt="..."></a>
                   </div>
-                  <p class="card-price">
-                    $ '. $product['PRICE'] .'
-                    <span class="card-sale-price '. $product['STATUS'] .'">Sale off to: $ '. $product['SALEPRICE'] .'</span>
-                  </p>
+                  <div class="card-body">
+                    <div class="d-flex flex-row justify-content-between">
+                      <a href="" style="width: 86%;">
+                        <p class="card-title">'. $product['PRODUCTNAME'] .'</p>
+                      </a>
+                      <button type="submit" name="addtocart" class="bi bi-cart" title="add to cart"></button>
+                    </div>
+                    <p class="card-price">
+                      $ '. $product['PRICE'] .'
+                      <span class="card-sale-price '. $product['STATUS'] .'">Sale off to: $ '. $product['SALEPRICE'] .'</span>
+                    </p>
+                  </div>
                 </div>
-              </div>';
+              </form>
+              ';
             };
           ?>
         </div>
