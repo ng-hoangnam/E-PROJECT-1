@@ -1,5 +1,8 @@
 <?php
     include_once('config.php');
+    if(isset($_SESSION['logined'])){
+        header('location:./index.html');
+    }
     if(isset($_POST['login'])){
         $errors = [] ;
 
