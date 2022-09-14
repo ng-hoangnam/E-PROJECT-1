@@ -183,7 +183,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`PRODUCTID`, `PRODUCTNAME`, `DETAIL`, `QUANTITY`, `STATUS`, `BRANDID`, `PRICE`, `SALEPRICE`, `CRTUSER`, `CRTDATE`, `MDFUSER`, `MDFDATE`, `SOURCE`) VALUES
-(1, 'BRIGHTON TAPERED POLISHED STAINLESS STEEL PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'sale', 1, 499, 199, NULL, NULL, NULL, NULL, 'cl1.jpg'),
+(1, 'BRIGHTON TAPERED POLISHED STAINLESS STEEL PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'sale', 1, 499, 199, NULL, NULL, NULL, NULL, 'cl19.jpg'),
 (2, 'BRIO BLACKENED BRASS PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'avaiable', 1, 399, NULL, NULL, NULL, NULL, NULL, 'cl2.jpg'),
 (3, 'BRIO POLISHED BRASS PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'sale', 1, 399, 299, NULL, NULL, NULL, NULL, 'cl3.jpg'),
 (4, 'COPA TIERED NATURAL RATTAN PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'avaiable', 1, 499, NULL, NULL, NULL, NULL, NULL, 'cl4.jpg'),
