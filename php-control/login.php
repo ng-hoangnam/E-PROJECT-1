@@ -1,7 +1,6 @@
 <?php
     // Include File Config Database
     include('./php-control/config.php');
-    session_start();
     // $connect = null;
     // Validate Log-in Form
     $errors = array();
@@ -65,4 +64,3 @@
         header('Location: register.html');
         exit;
     };
-?>
