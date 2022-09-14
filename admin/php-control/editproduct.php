@@ -49,9 +49,9 @@ if (isset($_POST['apply'])) {
             if ($file_error === 0) {
                 if ($file_size < 1000000) {
                     $file_namenew = uniqid('', true) . "." . $file_actuaext;
-                    $fie_destination = '../assets/img/lightType/ ' . $file_namenew;
+                    $fie_destination = '../assets/img/lightType/' . $file_namenew;
                     move_uploaded_file($file_tmpname, $fie_destination);
-                    $path = '../' . $product['SOURCE'];
+                    $path = '../assets/img/lightType/' . $product['SOURCE'];
                     unlink($path);
                 } else {
                     $errors['file'] = "Your file is too long !";
