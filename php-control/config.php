@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: Administrator <taithanh95.dev@gmail.com>
@@ -6,6 +7,7 @@
  * Time: 2:40 PM
  */
 
+session_start();
 //Config Database
 $connect = new mysqli('localhost', 'root', '', 'chic_lighting');
 
@@ -69,7 +71,7 @@ function update_data($table, $idfield, $idvalue, $data = array())
         $set .= $key . '=' . "'" . mysqli_real_escape_string($connect, $val) . "'" . ",";
     }
 
-    $sql = 'UPDATE ' . $table . ' SET ' . trim($set, ',') . ' WHERE ' . $idfield . ' = ' . (int)$idvalue;
+    $sql = 'UPDATE ' . $table . ' SET ' . trim($set, ',') . ' WHERE ' . $idfield . ' = ' . (int) $idvalue;
     return mysqli_query($connect, $sql);
     $connect->close();
 }
@@ -78,7 +80,7 @@ function update_data($table, $idfield, $idvalue, $data = array())
 function delete_data($table, $idfield, $idvalue)
 {
     global $connect;
-    $sql = 'DELETE FROM ' . $table . ' WHERE ' . $idfield . ' = ' . (int)$idvalue . '';
+    $sql = 'DELETE FROM ' . $table . ' WHERE ' . $idfield . ' = ' . (int) $idvalue . '';
     return mysqli_query($connect, $sql);
     $connect->close();
 }
@@ -99,7 +101,6 @@ function count_data($sql, $counts)
         return 0;
     }
 }
-
 //$data = array(
 //    'fullname' => 'Thanh test',
 //    'email' => 'thanhnt@gmail.com',
@@ -113,4 +114,3 @@ function count_data($sql, $counts)
 
 //$list = select_row("SELECT * FROM Feedback WHERE comment LIKE '%fsdfsd%'");
 //var_dump($list);
-?>
