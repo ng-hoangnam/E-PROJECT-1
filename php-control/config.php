@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by IntelliJ IDEA.
- * User: Administrator <taithanh95.dev@gmail.com>
- * Date: 10/08/2022
- * Time: 2:40 PM
- */
-
 session_start();
 //Config Database
 $connect = new mysqli('localhost', 'root', '', 'chic_lighting');
