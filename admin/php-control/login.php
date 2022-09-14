@@ -19,6 +19,7 @@
 
         if(empty($errors)){
             $check_login = "SELECT * FROM admin WHERE username = '$username' && password = '$password'";
+            
         }
     }
 ?>
