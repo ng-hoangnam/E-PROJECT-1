@@ -92,6 +92,12 @@
                     <div class="mb-3">
                         <img src="../<?php echo $product['SOURCE'] ?>" alt="" style="width: 15rem ;">
                     </div>
+                    <div>
+                        <label for="">Product Detail :</label>
+                        <textarea name="productdetail" cols="30" rows="10">
+                            <?php echo $product['DETAIL'] ?>
+                        </textarea>
+                    </div>
                     <div class="mb-3">
                         <button class="btn btn-success" name="apply">Apply</button>
                     </div>

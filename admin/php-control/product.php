@@ -2,7 +2,7 @@
     include_once('config.php');
 
     // Select all product
-    $sql_selectproduct = "SELECT * FROM products JOIN brands ON products.BRANDID = brands.BRANDID ";
+    $sql_selectproduct = "SELECT * FROM products JOIN brands ON products.BRANDID = brands.BRANDID ORDER BY PRODUCTID ASC ";
     $result_selectproduct = executeResult($sql_selectproduct);
 
     // Delete product
