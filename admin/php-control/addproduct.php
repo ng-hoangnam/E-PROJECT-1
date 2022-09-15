@@ -72,7 +72,7 @@ if (isset($_POST['add'])) {
     }
 
     if(empty($errors)){
-        $sql_addproduct = "INSERT INTO products (PRODUCTNAME , DETAIL , QUANTITY , STATUS , BRANDID , PRICE , SALEPRICE , SOURCE) VALUES ( '$productname' , '$productdetail' , '$productquantity' , '$productstatus' , '$productbrand' , '$productprice' , '$productsaleprice' , $file_namenew ) ";
+        $sql_addproduct = "INSERT INTO products (PRODUCTNAME , DETAIL , QUANTITY , STATUS , BRANDID , PRICE , SALEPRICE , SOURCE) VALUES ( '$productname' , '$productdetail' , '$productquantity' , '$productstatus' , '$productbrand' , '$productprice' , '$productsaleprice' , '$file_namenew' ) ";
         $conn->query($sql_addproduct);
         header('location:product.html');
     }
