@@ -26,7 +26,11 @@
     <div id="cart">
         <div class="d-flex flex-column align-items-center my-5">
             <?php foreach ($_SESSION['chiclight_cart'] as $key=>$val_cartitem):
-                echo $val_cartitem[0];
+            $sql = "SELECT * FROM products WHERE PRODUCTID = $val_cartitem[0]";
+            $connect = new mysqli('localhost', 'root', '', 'chic_lighting');
+            $result = mysqli_query($connect, $sql);
+            $row = $result->fetch_assoc();
+            var_dump($row);
             endforeach ?>
         </div>
     </div>
