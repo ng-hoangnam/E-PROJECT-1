@@ -64,8 +64,8 @@
           <?php 
             foreach($product_list as $key => $product) {
               echo '
-              <form action="" method="post">
-                <div class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" id="'. $product['PRODUCTID'] .'">
+              <form action="product.html?id='. $product['PRODUCTID'] .'" method="POST">
+                <div name="product-item" class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" id="'. $product['PRODUCTID'] .'">
                   <div class="card-img gallery-item '. $product['STATUS'] .'">
                     <a href=""><img src="./assets/img/lightType/'. $product['SOURCE'] . '" class="card-img-top" alt="..."></a>
                   </div>
@@ -74,7 +74,7 @@
                       <a href="" style="width: 86%;">
                         <p class="card-title">'. $product['PRODUCTNAME'] .'</p>
                       </a>
-                      <button type="submit" name="addtocart" class="bi bi-cart" title="add to cart"></button>
+                      <button type="submit" name="addtocart" class="bi bi-cart" title="Add to cart"></button>
                     </div>
                     <p class="card-price">
                       $ '. $product['PRICE'] .'

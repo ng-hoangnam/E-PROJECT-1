@@ -64,3 +64,10 @@
         header('Location: register.html');
         exit;
     };
+
+    //Directional - Get back Log-in Form by Log-out Button
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        header('Location: index.html');
+        exit;
+    };
