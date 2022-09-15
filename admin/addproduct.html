@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php include_once('./php-control/addproduct.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +24,108 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                     <div>
-                        <label for="">Product Name :</label>
-                        <input class="form-control" type="text" name="" id="">
+                        <label>Product Name :</label>
+                        <input class="form-control" type="text" name="productname" value="<?php if(isset($_POST['productname'])){echo $_POST['productname'];} ?>">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($errors['productname'])){
+                                    echo $errors['productname'] ;
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Brand :</label>
+                        <select class="form-control" name="productbrand">
+                            <?php foreach($result_brand as $val_brand) : ?>
+                                <option value="<?php echo $val_brand['BRANDID'] ?>"><?php echo $val_brand['BRANDNAME'] ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="number" class="form-control" name="productprice" value="<?php if(isset($_POST['productprice'])){echo $_POST['productprice'];} ?>">
+                    </div>
+                    <div class="mb3">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($errors['productprice'])){
+                                    echo $errors['productprice'] ;
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    <div>
+                        <label>Quantity :</label>
+                        <input type="number" class="form-control" name="productquantity" value="<?php if(isset($_POST['productquantity'])){echo $_POST['productquantity'];} ?>">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($errors['productquantity'])){
+                                    echo $errors['productquantity'] ;
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    <div>
+                        <label>Status</label>
+                        <input type="text" class="form-control" name="productstatus" value="<?php if(isset($_POST['productstatus'])){echo $_POST['productstatus'];} ?>">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($errors['productstatus'])){
+                                    echo $errors['productstatus'] ;
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    <div>
+                        <label>Sale Price</label>
+                        <input type="text" class="form-control" name="productsaleprice" value="<?php if(isset($_POST['productsaleprice'])){echo $_POST['productsaleprice'];} ?>">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($errors['productsaleprice'])){
+                                    echo $errors['productsaleprice'] ;
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    <div>
+                        <label>Image</label>
+                        <input type="file" name="file" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($errors['file'])){
+                                    echo $errors['file'] ;
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    <div>
+                        <label>Detail</label>
+                        <input class="form-control" name="productdetail" type="text" value="<?php if(isset($_POST['productdetail'])){echo $_POST['productdetail'] ;} ?>">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($errors['productdetail'])){
+                                    echo $errors['productdetail'] ;
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    <div>
+                        <button class="btn btn-success" name="add">Add product</button>
                     </div>
                 </form>
             </div><!-- /.container-fluid -->

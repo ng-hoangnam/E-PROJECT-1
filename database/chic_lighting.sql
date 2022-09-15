@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 14, 2022 at 05:12 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Host: localhost
+-- Generation Time: Sep 15, 2022 at 09:53 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -21,8 +21,27 @@ SET time_zone = "+00:00";
 -- Database: `chic_lighting`
 --
 CREATE DATABASE IF NOT EXISTS chic_lighting;
-
 USE chic_lighting;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `ID` int(11) NOT NULL,
+  `USERNAME` varchar(50) NOT NULL,
+  `PASSWORD` varchar(50) NOT NULL,
+  `FULLNAME` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`ID`, `USERNAME`, `PASSWORD`, `FULLNAME`) VALUES
+(1, 'admin', '601f1889667efaebb33b8c12572835da3f027f78', 'Nguyen Hoang Nam');
 
 -- --------------------------------------------------------
 
@@ -183,7 +202,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`PRODUCTID`, `PRODUCTNAME`, `DETAIL`, `QUANTITY`, `STATUS`, `BRANDID`, `PRICE`, `SALEPRICE`, `CRTUSER`, `CRTDATE`, `MDFUSER`, `MDFDATE`, `SOURCE`) VALUES
-(1, 'BRIGHTON TAPERED POLISHED STAINLESS STEEL PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'sale', 1, 499, 199, NULL, NULL, NULL, NULL, 'cl19.jpg'),
+(1, 'BRIGHTON TAPERED POLISHED STAINLESS STEEL PENDANT LIGHT 2', '                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...                        ', 10, 'sale', 1, 499, 199, NULL, NULL, NULL, NULL, 'cl19.jpg'),
 (2, 'BRIO BLACKENED BRASS PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'avaiable', 1, 399, NULL, NULL, NULL, NULL, NULL, 'cl2.jpg'),
 (3, 'BRIO POLISHED BRASS PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'sale', 1, 399, 299, NULL, NULL, NULL, NULL, 'cl3.jpg'),
 (4, 'COPA TIERED NATURAL RATTAN PENDANT LIGHT', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', 10, 'avaiable', 1, 499, NULL, NULL, NULL, NULL, NULL, 'cl4.jpg'),
@@ -254,6 +273,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `brands`
 --
 ALTER TABLE `brands`
@@ -314,6 +339,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `brands`
