@@ -46,7 +46,7 @@
                     echo '
                     <form method="GET">
                         <div class="dropdown">
-                            <a href="./login.html" class="nav-link" style="padding: 0;width: 100%;height: 100%;">
+                            <a href="#" class="nav-link" style="padding: 0;width: 100%;height: 100%;">
                                 Hi, ' . $_SESSION['customer_name'] . '
                                 <i class="bi bi-caret-down-fill"></i>
                             </a>
