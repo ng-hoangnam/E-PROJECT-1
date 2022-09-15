@@ -64,7 +64,8 @@
           <?php 
             foreach($product_list as $key => $product) {
               echo '
-              <form class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" action="product.html?id='. $product['PRODUCTID'] .'" method="POST">
+              <form class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" action="" method="POST">
+                <input type="hidden" name="productid" value="'. $product['PRODUCTID']. '">
                 <div id="'. $product['PRODUCTID'] .'">
                   <div class="card-img gallery-item '. $product['STATUS'] .'">
                     <a href=""><img src="./assets/img/lightType/'. $product['SOURCE'] . '" class="card-img-top" alt="..."></a>
