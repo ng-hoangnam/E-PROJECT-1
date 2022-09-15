@@ -29,7 +29,7 @@
                 <h2>Shopping Cart</h2>
                 <p>“You deserve the best”</p>
             </div>
-            <div class="container" style="border-top: 2px solid #f1f1f1;">
+            <div class="container">
                 <table>
                 <?php 
                     foreach ($_SESSION['chiclight_cart'] as $key=>$val_cartitem):
@@ -40,11 +40,11 @@
                         echo '
                                 <tr>
                                     <td><img src="./assets/img/lightType/'. $row['SOURCE'] .'" alt="..." class="img-fluid"></td>
-                                    <td>'. $row['PRODUCTNAME'] .'</td>
+                                    <td><i>'. $row['PRODUCTNAME'] .'</i></td>
                                     <td>1</td>
                                     <td>$ '. $row['PRICE'] .'</td>
                                     <td>Total</td>
-                                    <td><button class="btn btn-danger">Delete</button></td>
+                                    <td><button class="btn btn-outline-dark rounded-0">Delete</button></td>
                                 </tr>
                                 ';
                                 endforeach 

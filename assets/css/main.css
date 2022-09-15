@@ -1672,7 +1672,7 @@ input[type = submit]{
   }
 
   #cart table tr td {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #f1f1f1;
     padding: 20px;
   }
 
