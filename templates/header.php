@@ -17,54 +17,50 @@
             </a>
             <h1 class="logo me-auto me-lg-0"><a href="index.html">Chic & Lighting</a></h1>
         </div>
+        <div class="d-flex align-items-center">
 
-        <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-                <li><a class="nav-link" href="./index.html">Home</a></li>
-                <li><a class="nav-link" href="./product.html">Products</a></li>
-                <li><a class="nav-link" href="./about.html">About</a></li>
-                <li><a class="nav-link" href="./contact.html">Contact</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
+            <nav id="navbar" class="navbar order-last order-lg-1">
+                <ul>
+                    <li><a class="nav-link" href="./index.html">Home</a></li>
+                    <li><a class="nav-link" href="./product.html">Products</a></li>
+                    <li><a class="nav-link" href="./about.html">About</a></li>
+                    <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="dropdown">
+                            <?php
+                            if (!isset($_SESSION['username'])) {
+                                echo '
+                                    <a href="./login.html">
+                                        <i class="bi bi bi-person" style="font-size: 30px;"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="./login.html">Sign In</a></li>
+                                        <li><a href="./register.html">Register</a></li>
+                                    </ul>
+                                ';
+                            } else {
+                                echo '
+                                    <a href="#">
+                                        Hi, ' . $_SESSION['customer_name'] . '
+                                        <i class="bi bi-caret-down-fill"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Change Password</a></li>
+                                        <li class="d-flex justify-content-end mt-4">
+                                            <form method="GET">
+                                                <button class="btn btn-danger mx-2" type="submit" name="logout">Log out</button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                ';
+                            }
+                            ?>
+                    </li>
+                    <li><a href="./cart.html" class="nav-link"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
 
-        <!-- navbar login -->
-        <nav class="navbar login">
-            <div class="d-flex justify-content-end">
-                <?php
-                if (!isset($_SESSION['username'])) {
-                    echo '
-                    <div class="dropdown"><a href="./login.html" class="nav-link" style="padding: 0;width: 100%;height: 100%;"><i
-                    class="bi bi bi-person" style="font-size: 30px;"></i></a>
-                    <ul>
-                        <li><a href="./login.html">Sign In</a></li>
-                        <li><a href="./register.html">Register</a></li>
-                    </ul>
-                    </div>
-                    ';
-                } else {
-                    echo '
-                    <form method="GET">
-                        <div class="dropdown">
-                            <a href="#" class="nav-link" style="padding: 0;width: 100%;height: 100%;">
-                                Hi, ' . $_SESSION['customer_name'] . '
-                                <i class="bi bi-caret-down-fill"></i>
-                            </a>
-                            <ul>
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#">Change Password</a></li>
-                                <li class="d-flex justify-content-end mt-4"><button class="btn btn-danger mx-2" type="submit" name="logout">Log out</button></li>
-                            </ul>
-                        </div>
-                    </form>';
-                }
-                ?>
-
-                <div class="dropdown" style="margin-left: 28%;">
-                    <a href="./cart.html" class="nav-link" style="padding: 0;width: 100%;height: 100%;"><i class="bi bi bi-cart" style="font-size: 30px;"></i></a>
-                </div>
-            </div>
-        </nav>
-        <!-- end navbar login -->
     </div>
 </header><!-- End Header -->

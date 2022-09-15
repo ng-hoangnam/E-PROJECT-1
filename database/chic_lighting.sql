@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `chic_lighting`
 --
+CREATE DATABASE IF NOT EXISTS chic_lighting;
+USE chic_lighting;
 
 -- --------------------------------------------------------
 

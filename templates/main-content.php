@@ -37,7 +37,7 @@
                     <div class="swiper-slide">
                         <div class="row d-flex justify-content-between">
                             <div class="col-lg-6" style="width:24em;"> 
-                                <img src="./assets/img/lightType/acess/ha2.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/lightType/ha2.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Accents</h3>
@@ -55,7 +55,7 @@
                     <div class="swiper-slide">
                         <div class="row d-flex justify-content-between">
                             <div class="col-lg-6" style="width:24em;">
-                                <img src="./assets/img/lightType/ceiling/cl1.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/lightType/cl19.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Ceiling Lights</h3>
@@ -73,7 +73,7 @@
                     <div class="swiper-slide">
                         <div class="row d-flex justify-content-between">
                             <div class="col-lg-6" style="width:24em;">
-                                <img src="./assets/img/lightType/fan/f1.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/lightType/f1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Fans</h3>
@@ -91,7 +91,7 @@
                     <div class="swiper-slide">
                         <div class="row d-flex justify-content-xl-between justify-content-sm-center">
                             <div class="col-lg-6" style="width:24em;">
-                                <img src="./assets/img/lightType/Lamp/l1.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/lightType/l1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Lamps</h3>
@@ -109,7 +109,7 @@
                     <div class="swiper-slide">
                         <div class="row d-flex justify-content-between">
                             <div class="col-lg-6" style="width:24em;">
-                                <img src="./assets/img/lightType/outdoor/od1.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/lightType/od1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Outdoor Lights</h3>
@@ -127,7 +127,7 @@
                     <div class="swiper-slide">
                         <div class="row d-flex justify-content-between">
                             <div class="col-lg-6" style="width:24em;">
-                                <img src="./assets/img/lightType/Wall/w1.jpg" class="img-fluid" alt="">
+                                <img src="./assets/img/lightType/w1.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Wall Lights</h3>

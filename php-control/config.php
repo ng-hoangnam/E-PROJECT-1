@@ -94,16 +94,11 @@ function count_data($sql, $counts)
         return 0;
     }
 }
-//$data = array(
-//    'fullname' => 'Thanh test',
-//    'email' => 'thanhnt@gmail.com',
-//    'comment' => 'Thanh comment',
-//    'experience' => 'good',
-//    'crtdate' => '2022-08-23'
-//);
-//
-//$var = insert_data('feedback',$data);
-//var_dump($var);
 
-//$list = select_row("SELECT * FROM Feedback WHERE comment LIKE '%fsdfsd%'");
-//var_dump($list);
+
+//Directional - Get back Log-in Form by Log-out Button
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header('Location: index.html');
+    exit;
+};

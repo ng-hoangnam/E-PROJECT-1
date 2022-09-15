@@ -232,6 +232,7 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
     font-size: 14px;
+    line-height: 41px;
 }
 
 .navbar a i,
@@ -249,7 +250,7 @@ h6 {
 .navbar .dropdown ul {
     display: block;
     position: absolute;
-    left: -1em;
+    left: 0;
     top: calc(100% + 30px);
     margin: 0;
     padding: 10px 0;
@@ -375,11 +376,6 @@ h6 {
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
     text-decoration: underline;
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-    margin: 15px;
 }
 
 .navbar-mobile .dropdown ul {
@@ -1272,17 +1268,6 @@ section {
 .filterbt:hover{
     background-color: #F0EFED;
 }
-.navicon{
-    width: 13%;
-}
-.navicon .navbar{
-    width: 100%;
-}
-.navicon .navbar a[class = nav-link]{
-    padding: 0 !important;
-    width: 10px !important;
-    height: 10px !important;
-}
 /* end product header */
 .card {
     bottom: 0 !important;
@@ -1324,10 +1309,12 @@ section {
     color: #222222 !important;
     background: white;
 }
+
 .stickyelm{
   position: sticky;
-  top: 71px;
+  top: 91px;
 }
+
 .mainproduct{
     width: 100%;
 }
@@ -1347,12 +1334,6 @@ section {
     padding: 15px;
 
 }
-
-/* .card-img-top{
-    border-radius: 0%;
-
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
-} */
 
 .card.bestseller::after {
     content: "#Best";
@@ -1504,6 +1485,10 @@ section {
         font-size: 105%;
     }
 
+    .stickyelm{
+        top: 62px;
+    }
+
 }
 @media (max-width: 991px) and (min-width: 548px){
     .header > div{
@@ -1576,6 +1561,10 @@ section {
     }
     .mainproduct h6{
         font-size: 25px;
+    }
+
+    .stickyelm{
+        top: 62px;
     }
 }
 /*--------------------------------------------------------------
