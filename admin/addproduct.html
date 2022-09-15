@@ -113,7 +113,7 @@
                     </div>
                     <div>
                         <label>Detail</label>
-                        <textarea class="form-control" name="productdetail" cols="30" rows="10"></textarea>
+                        <input class="form-control" name="productdetail" type="text" value="<?php if(isset($_POST['productdetail'])){echo $_POST['productdetail'] ;} ?>">
                     </div>
                     <div class="mb-3">
                         <span class="text-danger">

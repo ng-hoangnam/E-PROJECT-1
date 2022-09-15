@@ -17,6 +17,7 @@ if (isset($_POST['add'])) {
     $productquantity = $_POST['productquantity'];
     $productstatus = $_POST['productstatus'];
     $productsaleprice = $_POST['productsaleprice'];
+    $productdetail = $_POST['productdetail'];
 
     if(!empty($_FILES['file']['name'])){
         $file = $_FILES['file'];
@@ -37,8 +38,6 @@ if (isset($_POST['add'])) {
                     $file_namenew = uniqid('',true) . "." . $file_actuaext ;
                     $fie_destination = '../assets/img/lightType/' . $file_namenew;
                     move_uploaded_file($file_tmpname, $fie_destination);
-                    $path = '../assets/img/lightType/' . $product['SOURCE'];
-                    unlink($path);
                 }else{
                     $errors['file'] = 'Your file is too BIG !';
                 }
