@@ -9,7 +9,10 @@
             <a href="../admin/index.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="../index.html" class="nav-link">Web</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="./php-control/logout.php" class=" btn btn-danger">LogOut</a>
         </li>
     </ul>
 
@@ -90,8 +93,14 @@
             <div class="image">
                 <img src="./dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
+            <?php  
+                $session_name = $_SESSION['logined'];
+                $sql_queryname = "SELECT * FROM admin WHERE USERNAME = '$session_name'";
+                $query_name = $conn->query($sql_queryname);
+                $result_queryname = mysqli_fetch_array($query_name);
+            ?>
             <div class="info">
-                <a href="#" class="d-block">Administrator</a>
+                <a href="#" class="d-block"><?php echo $result_queryname['FULLNAME']; ?></a>
             </div>
         </div>
 
@@ -125,6 +134,12 @@
                     <a href="./addproduct.html" class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>ADD PRODUCT</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./addbrand.html" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>ADD BRAND</p>
                     </a>
                 </li>
                 <li class="nav-header">LABELS</li>

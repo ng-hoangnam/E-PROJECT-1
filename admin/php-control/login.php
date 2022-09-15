@@ -23,7 +23,7 @@
 
         if(empty($errors)){
             $hash_pass = sha1($password);
-            $check_login = "SELECT * FROM admin WHERE username = '$username' && password = '$hash_pass'";
+            $check_login = "SELECT * FROM admin WHERE USERNAME = '$username' && PASSWORD = '$hash_pass'";
             $result = $conn->query($check_login);
             $row = mysqli_num_rows($result);
             if($row > 0 ){
