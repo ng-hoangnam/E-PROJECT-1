@@ -1665,3 +1665,17 @@ input[type = submit]{
     margin-top: 155px;
     min-height: 30em;
   }
+
+  #cart table {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  #cart table tr td {
+    border-top: 1px solid #ccc;
+    padding: 20px;
+  }
+
+  #cart table tr img {
+    height: 10em;
+  }
