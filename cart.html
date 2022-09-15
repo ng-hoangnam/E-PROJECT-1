@@ -12,8 +12,9 @@
 
 <body>
     <?php include('./templates/header.php'); ?>
-    
+
     <!-- main content -->
+    <?php if(!isset($_SESSION['chiclight_cart'])):?>
     <div id="cart">
         <div class="d-flex flex-column align-items-center my-5">
             <b>(0)</b>
@@ -21,7 +22,15 @@
             <p>Figure out more from <a class="btn-link" href="./product.html">Our Product</a></p>
         </div>
     </div>
-
+    <?php else:?>
+    <div id="cart">
+        <div class="d-flex flex-column align-items-center my-5">
+            <?php foreach ($_SESSION['chiclight_cart'] as $key=>$val_cartitem):
+                echo $val_cartitem[0];
+            endforeach ?>
+        </div>
+    </div>
+    <?php endif;?>
     <?php include('./templates/footer.php'); ?>
 
     <?php include('./templates/link-script.php'); ?>
