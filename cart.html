@@ -30,41 +30,6 @@
                 <p>“You deserve the best”</p>
             </div>
             <div class="container">
-                <!-- <table>
-                    <?php 
-                    foreach ($_SESSION['cart'] as $key=>$val_cartitem):
-                        echo '
-                                <tr>
-                                    <td><img src="./assets/img/lightType/'. $row['SOURCE'] .'" alt="..." class="img-fluid"></td>
-                                    <td><i>'. $row['PRODUCTNAME'] .'</i></td>
-                                    <td>';
-                        if(!isset($val_cartitem[1])){
-                            $val_cartitem[1] = 1;
-                            echo $val_cartitem[1];
-                        }else{
-                            echo $val_cartitem[1];
-                        };
-                                    echo'</td>
-                                    <td>'. $row['PRICE'] .'$</td>
-                                    <td>Total: ';
-                                    $val_cartitem[2] = 1* $row['PRICE'];
-                                    echo $val_cartitem[2].'$';
-                                    echo '</td>
-                                    <td><button class="btn btn-outline-dark rounded-0">Delete</button></td>
-                                </tr>
-                                ';
-                                endforeach 
-                    ?>
-                    <td>TOTAL:
-                        <?php 
-                        $totalmoney = 0;
-                        for ($i = 0; $i < count($_SESSION['chiclight_cart']); $i++) {
-                            
-                        }
-                        echo $totalmoney;
-                        ?>
-                    </td>
-                </table> -->
                 <form>
                     <label for="">Total :</label>
                     <?php
