@@ -37,16 +37,15 @@
           <p>$<?php echo $result['PRICE']; ?></p>
           <p>Sale : <?php if($result['SALEPRICE'] != NULL){echo $result['SALEPRICE'];}else{echo 'NO' ;} ?></p>
         </div>
-        <form action="">
-          <div class="radiobutn">
-            <input type="radio" name="method" value="Ship" class="form-check-input mb-4"> <label>SHIP</label> <br>
-            <input type="radio" name="method" value="Freepickup" class="form-check-input mb-4"> <label>FREE CURBSIDE
-              PICKUP AT STORE</label> <br>
-          </div>
-          <div>
-            <label class="me-4">Number:</label><input type="number" name="quantity" min="1" class="mb-4 mt-4"> <br>
-          </div>
-          <input type="submit" value="ADD TO CART" class="mt-5"> <br>
+        <form method="post">
+          <input type="hidden" name="productid" value="<?php echo $result['PRODUCTID'] ?>">
+          <input type="number" name="productquantity" value="1">
+          <input type="hidden" name="productprice" value="<?php $result['PRICE'] ?>">
+          <input type="hidden" name="productsaleprice" value="<?$result['SALEPRICE'] ?>">
+          <input type="hidden" name="productimg" value="<?php $result['SOURCE'] ?>">
+          <input type="hidden" name="productname" value="<?php $result['PRODUCTNAME'] ?>">
+          
+          <button type="submit" class="btn btn-primary" name="addtocart">Submit</button>
         </form>
       </div>
       <!-- end information -->

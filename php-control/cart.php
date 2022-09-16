@@ -1,6 +1,6 @@
 <?php
     include('./php-control/config.php');
-
+    // Process delete item in cart
     if(isset($_POST['delete'])){
         $id_delete = $_POST['id'];
 
@@ -17,6 +17,7 @@
         header('location:cart.html');
     }
 
+    // Process quantity item cart
     if(isset($_GET['up'])){
         for($i=0 ; $i < count($_SESSION['cart']) ; $i++){
             if($_SESSION['cart'][$i][0] == $_GET['up']){
@@ -25,7 +26,8 @@
         }
         header('location:cart.html');
     }
-
+    
+    // Process quantity item cart
     if(isset($_GET['down'])){
         for($i=0 ; $i < count($_SESSION['cart']) ; $i++){
             if($_SESSION['cart'][$i][0] == $_GET['down']){
@@ -34,6 +36,5 @@
                 }
            }
         }
-
         header('location:cart.html');
     }
