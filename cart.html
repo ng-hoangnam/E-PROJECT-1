@@ -30,18 +30,6 @@
                 <p>“You deserve the best”</p>
             </div>
             <div class="container">
-                <form>
-                    <label for="">Total :</label>
-                    <?php
-                        $total = 0 ; 
-                        if(isset($_SESSION['cart'])){
-                            for($i ; $i < count($_SESSION['cart']) ; $i++){
-                                $total = $total + ($_SESSION['cart'][$i][2] * $_SESSION['cart'][$i][1]);
-                            }
-                        }
-                        echo $total ;
-                    ?>
-                </form>
                 <table>
                     <thead>
                         <tr>
@@ -57,10 +45,12 @@
                         <tr>
                             <td><img src="./assets/img/lightType/<?php echo $_SESSION['cart'][$i][3] ?>" alt=""></td>
                             <td>
-                                <?php echo $_SESSION['cart'][$i][4]; ?>
+                                <i><?php echo $_SESSION['cart'][$i][4]; ?></i>
                             </td>
                             <td>
+                                <button type="button" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-plus"></i></button>
                                 <?php echo $_SESSION['cart'][$i][1] ?>
+                                <button type="button" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-dash"></i></button>
                             </td>
                             <td>
                                 <?php echo $_SESSION['cart'][$i][2] ?>
@@ -75,6 +65,27 @@
                         <?php endfor ?>
                     </tbody>
                 </table>
+                <form>
+                    <div class="container">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h4>Cart total :</h4>
+                            <span class="mx-2">
+                                <?php
+                                    $total = 0 ; 
+                                    if(isset($_SESSION['cart'])){
+                                        for($i = 0 ; $i < count($_SESSION['cart']) ; $i++){
+                                            $total = $total + ($_SESSION['cart'][$i][2] * $_SESSION['cart'][$i][1]);
+                                        }
+                                    }
+                                    echo '$ ' . $total ;
+                                ?>
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-dark rounded-0">Place Order</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

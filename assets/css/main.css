@@ -985,7 +985,7 @@ section {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
-    background: #f1f1f1;
+    background: #fff;
     color: #222;
     resize: none;
 }
@@ -1671,9 +1671,11 @@ input[type = submit]{
     margin-top: 12px;
   }
 
+  #cart table tr th,
   #cart table tr td {
     border-top: 1px solid #f1f1f1;
     padding: 20px;
+    text-align: center;
   }
 
   #cart table tr img {
