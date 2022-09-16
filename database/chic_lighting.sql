@@ -2,9 +2,9 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 15, 2022 at 09:53 AM
--- Server version: 10.4.21-MariaDB
+-- Host: 127.0.0.1
+-- Generation Time: Sep 16, 2022 at 08:05 PM
+-- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -103,18 +103,20 @@ CREATE TABLE `feedback` (
 
 CREATE TABLE `orders` (
   `ORDERID` varchar(50) NOT NULL,
+  `USERID` int(11) NOT NULL,
   `FIRSTNAME` varchar(25) DEFAULT NULL,
   `LASTNAME` varchar(25) DEFAULT NULL,
   `ADDRESS` varchar(100) DEFAULT NULL,
   `EMAIL` varchar(50) DEFAULT NULL,
   `PHONE` varchar(20) DEFAULT NULL,
   `PAYMENT` varchar(100) DEFAULT NULL,
-  `STATUS` int(11) DEFAULT NULL,
-  `CRTUSER` varchar(25) DEFAULT NULL,
-  `CRTDATE` date DEFAULT NULL,
-  `MDFUSER` varchar(25) DEFAULT NULL,
-  `MDFDATE` date DEFAULT NULL
+  `STATUS` varchar(11) DEFAULT NULL,
+  `CRTDATE` date DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
 
 -- --------------------------------------------------------
 
@@ -126,14 +128,12 @@ CREATE TABLE `ordersdetail` (
   `ORDERID` varchar(50) NOT NULL,
   `PRODUCTID` int(11) DEFAULT NULL,
   `QUANTITY` int(11) DEFAULT NULL,
-  `PRICE` float DEFAULT NULL,
-  `EMAIL` varchar(50) DEFAULT NULL,
-  `NOTE` varchar(1000) DEFAULT NULL,
-  `CRTUSER` varchar(25) DEFAULT NULL,
-  `CRTDATE` date DEFAULT NULL,
-  `MDFUSER` varchar(25) DEFAULT NULL,
-  `MDFDATE` date DEFAULT NULL
+  `PRICE` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ordersdetail`
+--
 
 -- --------------------------------------------------------
 
@@ -229,6 +229,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`USERID`, `USERNAME`, `PASSWORD`, `FIRSTNAME`, `LASTNAME`, `ADDRESS`, `EMAIL`, `PHONE`, `CRTUSER`, `CRTDATE`, `MDFUSER`, `MDFDATE`) VALUES
+(1, 'test01', '601f1889667efaebb33b8c12572835da3f027f78', 'Nguyễn', 'Đức', '75A Đê La Thành', 'ngtrongduc106@gmail.com', NULL, NULL, '0000-00-00', NULL, NULL);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -260,7 +267,8 @@ ALTER TABLE `feedback`
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`ORDERID`);
+  ADD PRIMARY KEY (`ORDERID`),
+  ADD KEY `USERID` (`USERID`);
 
 --
 -- Indexes for table `ordersdetail`
@@ -314,7 +322,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `USERID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `USERID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -325,6 +333,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `dimension`
   ADD CONSTRAINT `FK_Dimension_Products` FOREIGN KEY (`PRODUCTID`) REFERENCES `products` (`PRODUCTID`);
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`USERID`) REFERENCES `users` (`USERID`);
 
 --
 -- Constraints for table `ordersdetail`

@@ -45,12 +45,18 @@
                         <tr>
                             <td><img src="./assets/img/lightType/<?php echo $_SESSION['cart'][$i][3] ?>" alt=""></td>
                             <td>
-                                <i><?php echo $_SESSION['cart'][$i][4]; ?></i>
+                                <i>
+                                    <?php echo $_SESSION['cart'][$i][4]; ?>
+                                </i>
                             </td>
                             <td>
-                                <a href="cart.html?up=<?php echo $_SESSION['cart'][$i][0] ?>" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-plus"></i></a>
+                                <a href="cart.html?up=<?php echo $_SESSION['cart'][$i][0] ?>"
+                                    class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i
+                                        class="bi bi-plus"></i></a>
                                 <?php echo $_SESSION['cart'][$i][1] ?>
-                                <a href="cart.html?down=<?php echo $_SESSION['cart'][$i][0] ?>" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-dash"></i></a>
+                                <a href="cart.html?down=<?php echo $_SESSION['cart'][$i][0] ?>"
+                                    class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i
+                                        class="bi bi-dash"></i></a>
                             </td>
                             <td>
                                 <?php echo $_SESSION['cart'][$i][2] ?>
@@ -58,7 +64,8 @@
                             <td>
                                 <form method="post">
                                     <input type="hidden" name="id" value="<?php echo $_SESSION['cart'][$i][0]; ?>">
-                                    <button type="submit" class="btn btn-outline-dark rounded-0" name="delete">DELETE</button>
+                                    <button type="submit" class="btn btn-outline-dark rounded-0"
+                                        name="delete">DELETE</button>
                                 </form>
                             </td>
                         </tr>
@@ -82,17 +89,113 @@
                             </span>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-dark rounded-0">Place Order</button>
+                            <a class="btn btn-dark rounded-0" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Place Order</a>
                         </div>
-                    </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Infomation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div>
+                                                <label for="">First Name</label>
+                                                <input type="text" id="firstname">
+                                            </div>
+                                            <div>
+                                                <label for="">Last Name</label>
+                                                <input type="text" id="lastname">
+                                            </div>
+                                            <div>
+                                                <label for="">Address</label>
+                                                <input type="text" id="address">
+                                            </div>
+                                            <div>
+                                                <label for="">Phone</label>
+                                                <input type="text" id="phone">
+                                            </div>
+                                            <div>
+                                                <label for="">Email</label>
+                                                <input type="text" id="email">
+                                            </div>
+                                            <div>
+                                                <label for="">Payment</label>
+                                                <select id="payment">
+                                                    <option value="Ship">Ship</option>
+                                                    <option value="Received at the shop">Received at the shop</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label for="">Note</label>
+                                                <input type="text" id="note">
+                                            </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="confirm">Confirm</button>
+                                    </div>
                 </form>
             </div>
         </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
     </div>
     <?php endif;?>
     <?php include('./templates/footer.html'); ?>
 
     <?php include('./templates/link-script.html'); ?>
 </body>
+<script>
+    $(document).ready(function(){
+        $("#confirm").click(function(){
+            var firstname = $("#firstname").val();
+            var lastname = $("#lastname").val();
+            var address = $("#address").val();
+            var phone = $("#phone").val();
+            var payment = $('#payment').val();
+            var note = $("#note").val();
+            var email = $("#email").val();
 
+            if(firstname == "" || lastname == "" || address == "" || phone == "" || email == ""){
+                alert("Cannot empty!");
+            }else{
+                $.ajax({
+                    url : "cart.html",
+                    type : "post",
+                    dataType:"text",
+                    data: {
+                        firstnamePHP : firstname,
+                        lastnamePHP : lastname,
+                        addressPHP : address,
+                        phonePHP : phone,
+                        emailPHP : email,
+                        paymentPHP : payment,
+                        notePHP : note,
+                        placeorder: "true"
+                    },
+                    success: function(res){
+                        if(res == "plslogin"){
+                            alert('You need login before order!')
+                        }else{
+                            if(res == "success"){
+                                alert('order success');
+                                window.location='cart.html'
+                            }
+                        }
+                    }
+                })
+            }
+        })
+    })
+</script>
 </html>
