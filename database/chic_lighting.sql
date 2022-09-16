@@ -69,46 +69,6 @@ INSERT INTO `brands` (`BRANDID`, `BRANDNAME`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
---
-
-CREATE TABLE `cart` (
-  `CARTID` int(11) NOT NULL,
-  `USERID` int(11) DEFAULT NULL,
-  `SESSIONID` int(11) DEFAULT NULL,
-  `STATUS` int(11) DEFAULT NULL,
-  `FULLNAME` varchar(50) DEFAULT NULL,
-  `ADDRESS` varchar(100) DEFAULT NULL,
-  `EMAIL` varchar(50) DEFAULT NULL,
-  `PHONE` varchar(20) DEFAULT NULL,
-  `NOTE` varchar(1000) DEFAULT NULL,
-  `CRTUSER` varchar(25) DEFAULT NULL,
-  `CRTDATE` date DEFAULT NULL,
-  `MDFUSER` varchar(25) DEFAULT NULL,
-  `MDFDATE` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cartitems`
---
-
-CREATE TABLE `cartitems` (
-  `CARTID` int(11) DEFAULT NULL,
-  `PRODUCTID` int(11) DEFAULT NULL,
-  `PRICE` float DEFAULT NULL,
-  `QUANTITY` int(11) DEFAULT NULL,
-  `ACTIVE` int(11) DEFAULT NULL,
-  `CRTUSER` varchar(25) DEFAULT NULL,
-  `CRTDATE` date DEFAULT NULL,
-  `MDFUSER` varchar(25) DEFAULT NULL,
-  `MDFDATE` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `dimension`
 --
 
@@ -142,7 +102,7 @@ CREATE TABLE `feedback` (
 --
 
 CREATE TABLE `orders` (
-  `ORDERID` int(11) NOT NULL,
+  `ORDERID` varchar(50) NOT NULL,
   `FIRSTNAME` varchar(25) DEFAULT NULL,
   `LASTNAME` varchar(25) DEFAULT NULL,
   `ADDRESS` varchar(100) DEFAULT NULL,
@@ -163,7 +123,7 @@ CREATE TABLE `orders` (
 --
 
 CREATE TABLE `ordersdetail` (
-  `ORDERID` int(11) NOT NULL,
+  `ORDERID` varchar(50) NOT NULL,
   `PRODUCTID` int(11) DEFAULT NULL,
   `QUANTITY` int(11) DEFAULT NULL,
   `PRICE` float DEFAULT NULL,
@@ -285,20 +245,6 @@ ALTER TABLE `brands`
   ADD PRIMARY KEY (`BRANDID`);
 
 --
--- Indexes for table `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`CARTID`),
-  ADD KEY `FK_Cart_Users` (`USERID`);
-
---
--- Indexes for table `cartitems`
---
-ALTER TABLE `cartitems`
-  ADD KEY `FK_CartItems_Cart` (`CARTID`),
-  ADD KEY `FK_CartItems_Products` (`PRODUCTID`);
-
---
 -- Indexes for table `dimension`
 --
 ALTER TABLE `dimension`
@@ -353,22 +299,10 @@ ALTER TABLE `brands`
   MODIFY `BRANDID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `cart`
---
-ALTER TABLE `cart`
-  MODIFY `CARTID` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `ORDERID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -385,19 +319,6 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `cart`
---
-ALTER TABLE `cart`
-  ADD CONSTRAINT `FK_Cart_Users` FOREIGN KEY (`USERID`) REFERENCES `users` (`USERID`);
-
---
--- Constraints for table `cartitems`
---
-ALTER TABLE `cartitems`
-  ADD CONSTRAINT `FK_CartItems_Cart` FOREIGN KEY (`CARTID`) REFERENCES `cart` (`CARTID`),
-  ADD CONSTRAINT `FK_CartItems_Products` FOREIGN KEY (`PRODUCTID`) REFERENCES `products` (`PRODUCTID`);
 
 --
 -- Constraints for table `dimension`
