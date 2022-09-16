@@ -13,4 +13,6 @@
         if(count($_SESSION['cart']) == 0){
             unset($_SESSION['cart']);
         }
+
+        header('location:cart.html');
     }
