@@ -65,6 +65,18 @@
                         ?>
                     </td>
                 </table> -->
+                <form>
+                    <label for="">Total :</label>
+                    <?php
+                        $total = 0 ; 
+                        if(isset($_SESSION['cart'])){
+                            for($i ; $i < count($_SESSION['cart']) ; $i++){
+                                $total = $total + ($_SESSION['cart'][$i][2] * $_SESSION['cart'][$i][1]);
+                            }
+                        }
+                        echo $total ;
+                    ?>
+                </form>
                 <table>
                     <thead>
                         <tr>
