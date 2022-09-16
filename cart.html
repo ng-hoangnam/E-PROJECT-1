@@ -1,4 +1,4 @@
-<?php include('./php-control/product.php'); ?>
+<?php include('./php-control/cart.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +14,7 @@
     <?php include('./templates/header.html'); ?>
 
     <!-- main content -->
-    <?php if(!isset($_SESSION['chiclight_cart'])):?>
+    <?php if(!isset($_SESSION['cart'])):?>
     <div id="cart">
         <div class="d-flex flex-column align-items-center my-5">
             <b>(0)</b>
@@ -30,13 +30,9 @@
                 <p>“You deserve the best”</p>
             </div>
             <div class="container">
-                <table>
+                <!-- <table>
                     <?php 
-                    foreach ($_SESSION['chiclight_cart'] as $key=>$val_cartitem):
-                        $sql = "SELECT * FROM products WHERE PRODUCTID = $val_cartitem[0]";
-                        $connect = new mysqli('localhost', 'root', '', 'chic_lighting');
-                        $result = mysqli_query($connect, $sql);
-                        $row = $result->fetch_assoc();
+                    foreach ($_SESSION['cart'] as $key=>$val_cartitem):
                         echo '
                                 <tr>
                                     <td><img src="./assets/img/lightType/'. $row['SOURCE'] .'" alt="..." class="img-fluid"></td>
@@ -68,6 +64,39 @@
                         echo $totalmoney;
                         ?>
                     </td>
+                </table> -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Img</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php for($i = 0 ; $i < count($_SESSION['cart']) ; $i++ ): ?>
+                        <tr>
+                            <td><img src="./assets/img/lightType/<?php echo $_SESSION['cart'][$i][3] ?>" alt=""></td>
+                            <td>
+                                <?php echo $_SESSION['cart'][$i][4]; ?>
+                            </td>
+                            <td>
+                                <?php echo $_SESSION['cart'][$i][1] ?>
+                            </td>
+                            <td>
+                                <?php echo $_SESSION['cart'][$i][2] ?>
+                            </td>
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="id" value="<?php echo $_SESSION['cart'][$i][0]; ?>">
+                                    <button type="submit" class="btn btn-outline-dark rounded-0" name="delete">DELETE</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <?php endfor ?>
+                    </tbody>
                 </table>
             </div>
         </div>

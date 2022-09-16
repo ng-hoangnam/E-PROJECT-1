@@ -1,3 +1,4 @@
+<?php include_once('./php-control/product-detail.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +22,9 @@
       <div id="carouselExampleIndicators" class="carousel slide gallery" data-bs-ride="true">
         <div class="carousel-inner">
           <div class="carousel-item gallery-item active" style="height: 30em;">
-            <a href="./assets/img/lightType/tpl1zoom.jpg" class="gallery-lightbox"
+            <a href="./assets/img/lightType/<?php echo $result['SOURCE']; ?>" class="gallery-lightbox"
               data-gall="gallery-item">
-              <img src="./assets/img/lightType/tpl1zoom.jpg" alt="..." class="img-fluid">
+              <img src="./assets/img/lightType/<?php echo $result['SOURCE']; ?>" alt="..." class="img-fluid">
             </a>
           </div>
         </div>
@@ -32,8 +33,9 @@
       <!-- information -->
       <div class="productinfor justify-content-between">
         <div class="fw-bold mb-5">
-          <p>HAMMERED BRASS SHALLOW DOME PENDANT LIGHT</p>
-          <p>$399</p>
+          <p><?php echo $result['PRODUCTNAME'] ?></p>
+          <p>$<?php echo $result['PRICE']; ?></p>
+          <p>Sale : <?php if($result['SALEPRICE'] != NULL){echo $result['SALEPRICE'];}else{echo 'NO' ;} ?></p>
         </div>
         <form action="">
           <div class="radiobutn">

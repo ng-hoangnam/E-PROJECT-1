@@ -65,16 +65,21 @@
             foreach($product_list as $key => $product) {
               echo '
               <form class="card '. $product['BRANDNAME'] .' '. $product['STATUS'] .' viewall" action="" method="POST">
-                <input type="hidden" name="productid" value="'. $product['PRODUCTID']. '">
                 <div id="'. $product['PRODUCTID'] .'">
                   <div class="card-img gallery-item '. $product['STATUS'] .'">
-                    <a href=""><img src="./assets/img/lightType/'. $product['SOURCE'] . '" class="card-img-top" alt="..."></a>
+                    <a href="product-detail.html?id='.$product['PRODUCTID'].'"><img src="./assets/img/lightType/'. $product['SOURCE'] . '" class="card-img-top" alt="..."></a>
                   </div>
                   <div class="card-body">
                     <div class="d-flex flex-row justify-content-between">
-                      <a href="" style="width: 86%;">
+                      <a href="product-detail.html?id='.$product['PRODUCTID'].' " style="width: 86%;">
                         <p class="card-title">'. $product['PRODUCTNAME'] .'</p>
                       </a>
+                      <input type="hidden" name="productid" value="'. $product['PRODUCTID']. '">
+                      <input type="hidden" name="productquantity" value="1">
+                      <input type="hidden" name="productprice" value="'. $product['PRICE'] .'">
+                      <input type="hidden" name="productsaleprice" value="'.$product['SALEPRICE'].'">
+                      <input type="hidden" name="productimg" value="'.$product['SOURCE'].'">
+                      <input type="hidden" name="productname" value="'.$product['PRODUCTNAME'].'">
                       <button type="submit" name="addtocart" class="bi bi-cart" title="Add to cart"></button>
                     </div>
                     <p class="card-price">

@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 //Config Database
 $connect = new mysqli('localhost', 'root', '', 'chic_lighting');
