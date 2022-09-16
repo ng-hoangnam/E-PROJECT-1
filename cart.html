@@ -48,9 +48,9 @@
                                 <i><?php echo $_SESSION['cart'][$i][4]; ?></i>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-plus"></i></button>
+                                <a href="cart.html?up=<?php echo $_SESSION['cart'][$i][0] ?>" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-plus"></i></a>
                                 <?php echo $_SESSION['cart'][$i][1] ?>
-                                <button type="button" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-dash"></i></button>
+                                <a href="cart.html?down=<?php echo $_SESSION['cart'][$i][0] ?>" class="btn btn-outline-dark rounded-0 mx-2" style="padding: 0 4px;"><i class="bi bi-dash"></i></a>
                             </td>
                             <td>
                                 <?php echo $_SESSION['cart'][$i][2] ?>

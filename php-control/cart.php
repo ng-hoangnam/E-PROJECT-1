@@ -16,3 +16,24 @@
 
         header('location:cart.html');
     }
+
+    if(isset($_GET['up'])){
+        for($i=0 ; $i < count($_SESSION['cart']) ; $i++){
+            if($_SESSION['cart'][$i][0] == $_GET['up']){
+                $_SESSION['cart'][$i][1] = $_SESSION['cart'][$i][1] + 1 ;
+           }
+        }
+        header('location:cart.html');
+    }
+
+    if(isset($_GET['down'])){
+        for($i=0 ; $i < count($_SESSION['cart']) ; $i++){
+            if($_SESSION['cart'][$i][0] == $_GET['down']){
+                if($_SESSION['cart'][$i][1] > 1){
+                    $_SESSION['cart'][$i][1] = $_SESSION['cart'][$i][1] - 1 ;
+                }
+           }
+        }
+
+        header('location:cart.html');
+    }
