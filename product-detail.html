@@ -14,11 +14,11 @@
   <?php include('./templates/header.html'); ?>
   <!-- main content -->
   <div id="product-detail" class="container">
-    <div class="text-center fw-bold fs-2 justify-content-between">
-      <p>Product Details</p>
+    <div class="section-title">
+      <h2>Product Detail</h2>
+      <p>“Went for grocery, came back happy”</p>
     </div>
     <div class="d-flex flex-row justify-content-between">
-      <!-- slide -->
       <div id="carouselExampleIndicators" class="carousel slide gallery" data-bs-ride="true">
         <div class="carousel-inner">
           <div class="carousel-item gallery-item active" style="height: 30em;">
@@ -29,13 +29,12 @@
           </div>
         </div>
       </div>
-      <!-- end silde -->
       <!-- information -->
       <div class="productinfor justify-content-between">
-        <div class="fw-bold mb-5">
+        <div class="mb-5">
           <p><?php echo $result['PRODUCTNAME'] ?></p>
           <p>$<?php echo $result['PRICE']; ?></p>
-          <p>Sale : <?php if($result['SALEPRICE'] != NULL){echo $result['SALEPRICE'];}else{echo 'NO' ;} ?></p>
+          <p>On sale: : <?php if($result['SALEPRICE'] != NULL){echo '<b style="color: red;">$ '. $result['SALEPRICE'] .'</b>';}else{echo '<i style="color: #7F8487;">event comming soon...</i>' ;} ?></p>
         </div>
         <form method="post">
           <input type="hidden" name="productid" value="<?php echo $result['PRODUCTID'] ?>">
@@ -45,7 +44,7 @@
           <input type="hidden" name="productimg" value="<?php $result['SOURCE'] ?>">
           <input type="hidden" name="productname" value="<?php $result['PRODUCTNAME'] ?>">
           
-          <button type="submit" class="btn btn-primary" name="addtocart">Submit</button>
+          <button type="submit" class="btn btn-outline-dark rounded-0" name="addtocart">Add to cart</button>
         </form>
       </div>
       <!-- end information -->

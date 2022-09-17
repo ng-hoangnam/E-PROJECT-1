@@ -93,62 +93,76 @@
                                 data-bs-target="#exampleModal">Place Order</a>
                         </div>
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Infomation</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div>
-                                                <label for="">First Name</label>
-                                                <input type="text" id="firstname">
+                        <form>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="exampleModalLabel">Infomation</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="input-group input-group-sm mb-3">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">First Name</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="firstname" id="firstname">
                                             </div>
-                                            <div>
-                                                <label for="">Last Name</label>
-                                                <input type="text" id="lastname">
+                                            <div class="input-group input-group-sm mb-3">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">Last Name</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="lastname" id="lastname">
                                             </div>
-                                            <div>
-                                                <label for="">Address</label>
-                                                <input type="text" id="address">
+                                            <div class="input-group input-group-sm mb-3">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">Address</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="address" id="address">
                                             </div>
-                                            <div>
-                                                <label for="">Phone</label>
-                                                <input type="text" id="phone">
+                                            <div class="input-group input-group-sm mb-3">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">Phone</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="phone" id="phone">
                                             </div>
-                                            <div>
-                                                <label for="">Email</label>
-                                                <input type="text" id="email">
+                                            <div class="input-group input-group-sm mb-3">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">Email</span>
+                                                </div>
+                                                <input type="email" class="form-control" aria-label="Small" aria-describedby="email" id="email">
                                             </div>
-                                            <div>
-                                                <label for="">Payment</label>
-                                                <select id="payment">
-                                                    <option value="Ship">Ship</option>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                  <label class="input-group-text" for="payment">Payment</label>
+                                                </div>
+                                                <select class="custom-select" id="payment">
+                                                    <option value="Ship" selected>Ship</option>
                                                     <option value="Received at the shop">Received at the shop</option>
                                                 </select>
+                                              </div>
+                                            <div class="input-group input-group-sm mb-3">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">Note</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="note" id="note">
                                             </div>
-                                            <div>
-                                                <label for="">Note</label>
-                                                <input type="text" id="note">
-                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" id="confirm">Confirm</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" id="confirm">Confirm</button>
-                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </form>
             </div>
         </div>
-    </div>
-    </div>
-    </form>
-    </div>
-    </div>
     </div>
     <?php endif;?>
     <?php include('./templates/footer.html'); ?>
@@ -156,8 +170,8 @@
     <?php include('./templates/link-script.html'); ?>
 </body>
 <script>
-    $(document).ready(function(){
-        $("#confirm").click(function(){
+    $(document).ready(function () {
+        $("#confirm").click(function () {
             var firstname = $("#firstname").val();
             var lastname = $("#lastname").val();
             var address = $("#address").val();
@@ -166,30 +180,30 @@
             var note = $("#note").val();
             var email = $("#email").val();
 
-            if(firstname == "" || lastname == "" || address == "" || phone == "" || email == ""){
+            if (firstname == "" || lastname == "" || address == "" || phone == "" || email == "") {
                 alert("Cannot empty!");
-            }else{
+            } else {
                 $.ajax({
-                    url : "cart.html",
-                    type : "post",
-                    dataType:"text",
+                    url: "cart.html",
+                    type: "post",
+                    dataType: "text",
                     data: {
-                        firstnamePHP : firstname,
-                        lastnamePHP : lastname,
-                        addressPHP : address,
-                        phonePHP : phone,
-                        emailPHP : email,
-                        paymentPHP : payment,
-                        notePHP : note,
+                        firstnamePHP: firstname,
+                        lastnamePHP: lastname,
+                        addressPHP: address,
+                        phonePHP: phone,
+                        emailPHP: email,
+                        paymentPHP: payment,
+                        notePHP: note,
                         placeorder: "true"
                     },
-                    success: function(res){
-                        if(res == "plslogin"){
+                    success: function (res) {
+                        if (res == "plslogin") {
                             alert('You need login before order!')
-                        }else{
-                            if(res == "success"){
+                        } else {
+                            if (res == "success") {
                                 alert('order success');
-                                window.location='cart.html'
+                                window.location = 'cart.html'
                             }
                         }
                     }
@@ -198,4 +212,5 @@
         })
     })
 </script>
+
 </html>
