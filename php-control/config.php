@@ -101,3 +101,17 @@ if (isset($_GET['logout'])) {
     header('Location: index.html');
     exit;
 };
+
+function executeResult($sql)
+{
+    $conn = mysqli_connect('localhost', 'root', '', 'chic_lighting');
+    $resultset = mysqli_query($conn , $sql);
+    $list = [] ;
+    while($row = mysqli_fetch_array($resultset , 1))
+    {
+        $list[] = $row;
+    }
+    mysqli_close($conn);
+    return $list;
+}
+

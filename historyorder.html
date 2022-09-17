@@ -1,12 +1,14 @@
 <?php include('./php-control/historyorder.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include('./templates/main-head.html'); ?>
 </head>
+
 <body>
     <?php include('./templates/header.html'); ?>
     <div id="cart">
@@ -15,7 +17,31 @@
                 <h2>History Order</h2>
             </div>
             <div class="container">
-                123
+                <h3>You have :
+                    <?php echo count($dataorder) ?> Order
+                </h3>
+            </div>
+            <div class="container">
+                <?php foreach($dataorder as $val_order): ?>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>OrderID</p>
+                            <?php echo $val_order['ORDERID'] ?>
+                        </div>
+                        <div class="col-6">
+                            <button data-bs-toggle="collapse" href="#collapseExample<?php echo $val_order['ORDERID'] ?>" role="button" aria-expanded="false" aria-controls="collapseExample">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseExample<?php echo $val_order['ORDERID'] ?>">
+                    <div class="row">
+                        <div class="col-3">1</div>
+                        <div class="col-3">2</div>
+                        <div class="col-3">3</div>
+                        <div class="col-3">4</div>
+                    </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
