@@ -36,11 +36,32 @@
                 </div>
                 <div class="collapse" id="collapseExample<?php echo $val_order['ORDERID'] ?>">
                     <div class="row">
-                        <div class="col-3">1</div>
-                        <div class="col-3">2</div>
-                        <div class="col-3">3</div>
-                        <div class="col-3">4</div>
+                        <div class="col-3">IMG</div>
+                        <div class="col-3">PRODUCTNAME</div>
+                        <div class="col-3">QUANTITY</div>
+                        <div class="col-3">PRICE</div>
                     </div>
+                    <?php
+                        $orderid = $val_order['ORDERID'];  
+                        $sql_selectorderdetail = "SELECT ordersdetail.ORDERID , ordersdetail.QUANTITY , ordersdetail.QUANTITY , ordersdetail.PRICE , products.PRODUCTNAME , products.SOURCE FROM `ordersdetail` JOIN products ON products.PRODUCTID = ordersdetail.PRODUCTID WHERE ORDERID = '$orderid'";
+                        $result_orderdetail = executeResult($sql_selectorderdetail);
+                        foreach($result_orderdetail as $val_orderdetail):
+                    ?>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="./assets/img/lightType/<?php echo $val_orderdetail['SOURCE'] ?>" style="width: 50px ;">
+                        </div>
+                        <div class="col-3">
+                            <p><?php echo $val_orderdetail['PRODUCTNAME'] ?></p>
+                        </div>
+                        <div class="col-3">
+                            <p><?php echo $val_orderdetail['QUANTITY'] ?></p>
+                        </div>
+                        <div class="col-3">
+                            <p><?php echo $val_orderdetail['PRICE'] ?></p>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                 <?php endforeach ?>
             </div>
         </div>
