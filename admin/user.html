@@ -1,0 +1,72 @@
+<?php session_start(); ?>
+<?php include_once('./php-control/user.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php include_once('./templates/head.html'); ?>
+</head>
+<body>
+    <?php include_once('./templates/nav.html'); ?>
+ <!-- Content Wrapper. Contains page content -->
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">List USER</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <p>KEY</p>
+                </div>
+                <div class="col-2">
+                    <p>USERNAME</p>
+                </div>
+                <div class="col-2">
+                    <p>NAME</p>
+                </div>
+                <div class="col-2">
+                    <p>ADDRESS</p>
+                </div>
+                <div class="col-2">
+                    <p>CREATE AT</p>
+                </div>
+            </div>
+            <?php foreach($result_user as $key=>$val_user): ?>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-2">
+                            <?php echo $key+1 ?>
+                        </div>
+                        <div class="col-2">
+                            <?php echo $val_user['USERNAME'] ?>
+                        </div>
+                        <div class="col-2">
+                            <?php echo $val_user['FIRSTNAME'] ?>
+                            <?php echo $val_user['LASTNAME'] ?>
+                        </div>
+                        <div class="col-2">
+                            <?php echo $val_user['ADDRESS'] ?>
+                        </div>
+                        <div class="col-2">
+                            <?php echo $val_user['CRTDATE'] ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+
+    <?php include_once('./templates/footer.html'); ?>
+</body>
+</html>

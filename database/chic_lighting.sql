@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2022 at 08:05 PM
+-- Generation Time: Sep 17, 2022 at 04:11 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -22,7 +22,6 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS chic_lighting;
 USE chic_lighting;
-
 -- --------------------------------------------------------
 
 --
@@ -221,19 +220,15 @@ CREATE TABLE `users` (
   `LASTNAME` varchar(25) DEFAULT NULL,
   `ADDRESS` varchar(100) DEFAULT NULL,
   `EMAIL` varchar(50) DEFAULT NULL,
-  `PHONE` varchar(20) DEFAULT NULL,
-  `CRTUSER` varchar(25) DEFAULT NULL,
-  `CRTDATE` date DEFAULT NULL,
-  `MDFUSER` varchar(25) DEFAULT NULL,
-  `MDFDATE` date DEFAULT NULL
+  `CRTDATE` date DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`USERID`, `USERNAME`, `PASSWORD`, `FIRSTNAME`, `LASTNAME`, `ADDRESS`, `EMAIL`, `PHONE`, `CRTUSER`, `CRTDATE`, `MDFUSER`, `MDFDATE`) VALUES
-(1, 'test01', '601f1889667efaebb33b8c12572835da3f027f78', 'Nguyễn', 'Đức', '75A Đê La Thành', 'ngtrongduc106@gmail.com', NULL, NULL, '0000-00-00', NULL, NULL);
+INSERT INTO `users` (`USERID`, `USERNAME`, `PASSWORD`, `FIRSTNAME`, `LASTNAME`, `ADDRESS`, `EMAIL`, `CRTDATE`) VALUES
+(1, 'test01', '601f1889667efaebb33b8c12572835da3f027f78', 'Nguyễn', 'Đức', '75A Đê La Thành', 'ngtrongduc106@gmail.com', '0000-00-00');
 
 --
 -- Indexes for dumped tables

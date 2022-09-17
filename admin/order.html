@@ -1,0 +1,117 @@
+<?php session_start(); ?>
+<?php include_once('./php-control/order.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php include_once('./templates/head.html'); ?>
+</head>
+
+<body>
+    <?php include_once('./templates/nav.html'); ?>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">List Order</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <?php foreach($result_order as $val_order): ?>
+                <div class="card text-center">
+                    <div class="row">
+                        <div class="col-2">
+                            <p>OrderID</p>
+                            <p>
+                                <?php echo $val_order['ORDERID'] ?>
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <p>Customer</p>
+                            <p>
+                                <?php echo $val_order['USERID'] ?>
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <p>Name</p>
+                            <p>
+                                <?php echo $val_order['FIRSTNAME'] ?>
+                                <?php echo $val_order['LASTNAME'] ?>
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <p>Address</p>
+                            <p>
+                                <?php echo $val_order['ADDRESS'] ?>
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <p>Email</p>
+                            <p>
+                                <?php echo $val_order['EMAIL'] ?>
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <br>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<?php echo $val_order['ORDERID'] ?>">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal<?php echo $val_order['ORDERID'] ?>" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Order Detail</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <?php 
+                                    $orderdetail_id = $val_order['ORDERID'];
+                                    $sql_selectorderdetail = "SELECT ordersdetail.ORDERID , ordersdetail.QUANTITY , ordersdetail.QUANTITY , ordersdetail.PRICE , products.PRODUCTNAME , products.SOURCE FROM `ordersdetail` JOIN products ON products.PRODUCTID = ordersdetail.PRODUCTID WHERE ORDERID = '$orderdetail_id'";
+                                    $result_orderdetail = executeResult($sql_selectorderdetail);
+                                    $total = 0 ;
+                                    foreach($result_orderdetail as $val_orderdetail):
+                                ?>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../assets/img/lightType/<?php echo $val_orderdetail['SOURCE'] ?>" alt="" style="width: 50px ;">
+                                    </div>
+                                    <div class="col-3">
+                                        <?php echo $val_orderdetail['PRODUCTNAME'] ?>
+                                    </div>
+                                    <div class="col-3">
+                                        <?php echo $val_orderdetail['QUANTITY'] ?>
+                                    </div>
+                                    <div class="col-3">
+                                        <?php echo $val_orderdetail['PRICE'] ?>
+                                    </div>
+                                </div>
+                                <?php 
+                                    $total = $total + ($val_orderdetail['PRICE'] * $val_orderdetail['QUANTITY']) ;
+                                ?>
+                                <?php endforeach ?>
+                                <p>TOTAL : <?php echo $total; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach ?>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <?php include_once('./templates/footer.html'); ?>
+</body>
+
+</html>
