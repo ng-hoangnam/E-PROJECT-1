@@ -39,10 +39,10 @@
         <form method="post">
           <input type="hidden" name="productid" value="<?php echo $result['PRODUCTID'] ?>">
           <input type="number" name="productquantity" value="1">
-          <input type="hidden" name="productprice" value="<?php $result['PRICE'] ?>">
-          <input type="hidden" name="productsaleprice" value="<?$result['SALEPRICE'] ?>">
-          <input type="hidden" name="productimg" value="<?php $result['SOURCE'] ?>">
-          <input type="hidden" name="productname" value="<?php $result['PRODUCTNAME'] ?>">
+          <input type="hidden" name="productprice" value="<?php echo $result['PRICE'] ?>">
+          <input type="hidden" name="productsaleprice" value="<?php echo $result['SALEPRICE'] ?>">
+          <input type="hidden" name="productimg" value="<?php echo $result['SOURCE'] ?>">
+          <input type="hidden" name="productname" value="<?php echo $result['PRODUCTNAME'] ?>">
           
           <button type="submit" class="btn btn-outline-dark rounded-0" name="addtocart">Add to cart</button>
         </form>
