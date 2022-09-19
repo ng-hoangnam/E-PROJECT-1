@@ -30,7 +30,7 @@
                             <?php echo $val_order['ORDERID'] ?>
                         </div>
                         <div class="col-6">
-                            <button data-bs-toggle="collapse" href="#collapseExample<?php echo $val_order['ORDERID'] ?>" role="button" aria-expanded="false" aria-controls="collapseExample">Detail</button>
+                            <button class="btn btn-outline-dark rounded-0" data-bs-toggle="collapse" href="#collapseExample<?php echo $val_order['ORDERID'] ?>" role="button" aria-expanded="false" aria-controls="collapseExample">Detail</button>
                         </div>
                     </div>
                 </div>
@@ -65,6 +65,7 @@
                 <?php endforeach ?>
             </div>
         </div>
+    </div>
     </div>
     <?php include('./templates/footer.html'); ?>
 
