@@ -11,7 +11,7 @@
 
 <body>
     <?php include('./templates/header.html'); ?>
-    <div id="cart">
+    <div id="historyorder">
         <div class="d-flex flex-column align-items-center my-5">
             <div class="section-title">
                 <h2>History Order</h2>
@@ -23,49 +23,48 @@
             </div>
             <div class="container">
                 <?php foreach($dataorder as $val_order): ?>
-                <div class="card">
+                <div class="card mt-3">
                     <div class="row">
                         <div class="col-6">
-                            <p>OrderID</p>
-                            <?php echo $val_order['ORDERID'] ?>
+                            <p><b>OrderID: </b><i><?php echo $val_order['ORDERID'] ?></i></p>
                         </div>
                         <div class="col-6">
-                            <button class="btn btn-outline-dark rounded-0" data-bs-toggle="collapse" href="#collapseExample<?php echo $val_order['ORDERID'] ?>" role="button" aria-expanded="false" aria-controls="collapseExample">Detail</button>
+                            <button class="btn btn-outline-dark rounded-0" data-bs-toggle="collapse" href="#detail<?php echo $val_order['ORDERID'] ?>" role="button" aria-expanded="false" aria-controls="detail">Detail</button>
                         </div>
+                    </div>
+                    <div class="collapse mt-3" id="detail<?php echo $val_order['ORDERID'] ?>">
+                        <div class="row text-center">
+                            <div class="col-3 fw-bold">IMG</div>
+                            <div class="col-3 fw-bold">PRODUCTNAME</div>
+                            <div class="col-3 fw-bold">QUANTITY</div>
+                            <div class="col-3 fw-bold">PRICE</div>
+                        </div>
+                        <?php
+                            $orderid = $val_order['ORDERID'];  
+                            $sql_selectorderdetail = "SELECT ordersdetail.ORDERID , ordersdetail.QUANTITY , ordersdetail.QUANTITY , ordersdetail.PRICE , products.PRODUCTNAME , products.SOURCE FROM `ordersdetail` JOIN products ON products.PRODUCTID = ordersdetail.PRODUCTID WHERE ORDERID = '$orderid'";
+                            $result_orderdetail = executeResult($sql_selectorderdetail);
+                            foreach($result_orderdetail as $val_orderdetail):
+                        ?>
+                        <div class="row text-center">
+                            <div class="col-3">
+                                <img src="./assets/img/lightType/<?php echo $val_orderdetail['SOURCE'] ?>" style="width: 50px ;">
+                            </div>
+                            <div class="col-3">
+                                <p><?php echo $val_orderdetail['PRODUCTNAME'] ?></p>
+                            </div>
+                            <div class="col-3">
+                                <p><?php echo $val_orderdetail['QUANTITY'] ?></p>
+                            </div>
+                            <div class="col-3">
+                                <p><?php echo $val_orderdetail['PRICE'] ?></p>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
-                <div class="collapse" id="collapseExample<?php echo $val_order['ORDERID'] ?>">
-                    <div class="row">
-                        <div class="col-3">IMG</div>
-                        <div class="col-3">PRODUCTNAME</div>
-                        <div class="col-3">QUANTITY</div>
-                        <div class="col-3">PRICE</div>
-                    </div>
-                    <?php
-                        $orderid = $val_order['ORDERID'];  
-                        $sql_selectorderdetail = "SELECT ordersdetail.ORDERID , ordersdetail.QUANTITY , ordersdetail.QUANTITY , ordersdetail.PRICE , products.PRODUCTNAME , products.SOURCE FROM `ordersdetail` JOIN products ON products.PRODUCTID = ordersdetail.PRODUCTID WHERE ORDERID = '$orderid'";
-                        $result_orderdetail = executeResult($sql_selectorderdetail);
-                        foreach($result_orderdetail as $val_orderdetail):
-                    ?>
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="./assets/img/lightType/<?php echo $val_orderdetail['SOURCE'] ?>" style="width: 50px ;">
-                        </div>
-                        <div class="col-3">
-                            <p><?php echo $val_orderdetail['PRODUCTNAME'] ?></p>
-                        </div>
-                        <div class="col-3">
-                            <p><?php echo $val_orderdetail['QUANTITY'] ?></p>
-                        </div>
-                        <div class="col-3">
-                            <p><?php echo $val_orderdetail['PRICE'] ?></p>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                <?php endforeach ?>
+                <?php endforeach; ?>
             </div>
         </div>
-    </div>
     </div>
     <?php include('./templates/footer.html'); ?>
 

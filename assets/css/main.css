@@ -1681,3 +1681,10 @@ input[type = submit]{
   #cart table tr img {
     height: 10em;
   }
+/*--------------------------------------------------------------
+  # History Order Template
+  --------------------------------------------------------------*/
+  #historyorder {
+    margin-top: 155px;
+    min-height: 30em;
+  }
